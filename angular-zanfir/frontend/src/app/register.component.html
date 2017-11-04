@@ -1,0 +1,36 @@
+<mat-card>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input formControlName="firstName" [ngClass]="{'error': isEmpty('firstName')}"
+                matInput placeholder="First Name" style="width: 350px">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input formControlName="lastName" [ngClass]="{'error': isEmpty('lastName')}"
+                matInput placeholder="Last Name" style="width: 350px">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input formControlName="email" [ngClass]="{'error': isEmpty('email')}"
+                matInput type="email" placeholder="Email" style="width: 350px">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input formControlName="password" [ngClass]="{'error': isEmpty('password')}"
+                matInput type="password" placeholder="Password" style="width: 350px">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input formControlName="confirmPassword" [ngClass]="{'error': isEmpty('confirmPassword')}"
+                matInput type="password" placeholder="Confirm Password" style="width: 350px">
+        </mat-form-field>
+
+        <br>
+
+        <span *ngIf="form.errors?.mismatchedFields">Passwords do not match.</span>
+
+        <br>
+
+        <button mat-raised-button color="primary">Register</button>
+    </form>
+</mat-card>
