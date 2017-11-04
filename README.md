@@ -13,16 +13,8 @@ Collection of tutorials for additional learning
 
 ## Angular
 
-- [Tutorial by Angular](https://angular.io/tutorial/)
-
-    1. In Bash, type `npm start` to open the app.
-
-
-- [Tutorial by Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
-
-    1. Note, `ng new frontend` creates the frontend structure.
-    
-    1. Type `ng serve -o` or `npm start` to open the app.
+- angular-official, by [Angular](https://angular.io/tutorial/)
+- angular-zanfir, by [Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
 
 
 ## Mocha & Chai
