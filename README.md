@@ -3,14 +3,19 @@
 Collection of tutorials for additional learning
 
 
+## Table of Contents
+
+- [Angular](##Angular)
+
+
 ## Angular
 
-### 1. [Tutorial by Angular](https://angular.io/tutorial/)
+1. [Tutorial by Angular](https://angular.io/tutorial/)
 
     1. In Bash, type `npm start` to open the app.
 
 
-### 2. [Tutorial by Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
+2. [Tutorial by Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
 
     1. Note, `ng new frontend` creates the frontend structure.
     
