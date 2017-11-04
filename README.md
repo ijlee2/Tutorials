@@ -6,7 +6,7 @@ Collection of tutorials for additional learning
 ## Table of Contents
 
 - [Angular](#angular)
-- [Mocha & Chai](#mocha-chai)
+- [Mocha & Chai](#mocha--chai)
 - [Three.js](#threejs)
 - [Vue](#vue)
 
