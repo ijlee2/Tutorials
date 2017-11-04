@@ -10,7 +10,7 @@ Collection of tutorials for additional learning
     1. In Bash, type `npm start` to open the app.
 
 
-### 2. [Tutorial by Alexander Zanfir]
+### 2. [Tutorial by Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
 
     1. Note, `ng new frontend` creates the frontend structure.
     
@@ -29,6 +29,13 @@ Collection of tutorials for additional learning
     1. In Bash, run `mongod` to create MongoDB locally.
     
     1. Open another terminal, then type `npm test` to run the tests.
+
+
+## Three.js
+
+### 1. [Tutorial by Engin Arslan](https://www.linkedin.com/learning/learning-3d-graphics-on-the-web-with-three-js/)
+
+    1. Install [Live Server](https://github.com/tapio/live-server), then type `live-server` to run.
 
 
 ## Vue
