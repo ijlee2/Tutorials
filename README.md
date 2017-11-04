@@ -13,8 +13,8 @@ Collection of tutorials for additional learning
 
 ## Angular
 
-- angular-official, by [Angular](https://angular.io/tutorial/)
-- angular-zanfir, by [Alexander Zanfir](https://www.linkedin.com/learning/building-angular-and-node-apps-with-authentication/)
+- [angular-official](/angular-official), by Angular
+- [angular-zanfir](/angular-zanfir), by Alexander Zanfir
 
 
 ## Mocha & Chai
