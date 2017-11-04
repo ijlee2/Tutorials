@@ -25,11 +25,9 @@ Collection of tutorials for additional learning
 
 ## Three.js
 
-- [Tutorial by Engin Arslan](https://www.linkedin.com/learning/learning-3d-graphics-on-the-web-with-three-js/)
-
-    1. Install [Live Server](https://github.com/tapio/live-server), then type `live-server` to run.
+- [threejs-arslan](/threejs-arslan), by Engin Arslan
 
 
 ## Vue
 
-- [Tutorial by Michael Sullivan](https://www.linkedin.com/learning/learning-vue-js/)
+- [vue-sullivan](/vue-sullivan), by Michael Sullivan

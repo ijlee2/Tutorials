@@ -1,4 +1,4 @@
-# Mocha Tutorial #2
+# Mocha & Chai Tutorial
 
 [Tutorial by Samuele Zaza](https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai)
 
