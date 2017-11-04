@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<div id="app">
+    <!--{{firstName}} {{lastName}}-->
+    <div>
+        <input type="text" v-model.number.lazy="tempFahrenheit">
+        Temperature in Celsius: {{tempCelsius}}
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstName: 'Mike',
+            lastName: 'Sullivan',
+            tempFahrenheit: 0
+       },
+       computed: {
+           tempCelsius: function() {
+               console.log('using computed property');
+               return Math.round(5/9 * (this.tempFahrenheit -32));
+           }
+       },
+       methods: {
+           tempCelsiusFunc: function() {
+               console.log('using method');
+               return Math.round(5/9 * (this.tempFahrenheit -32));
+           }
+       }
+    });
+</script>

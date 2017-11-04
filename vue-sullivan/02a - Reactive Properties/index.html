@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<div id="app">
+    <p>
+        {{firstName}} {{lastName}}
+    </p>
+
+    <div v-for="framework in frameworks">
+        {{framework}}
+    </div>
+
+    <p>{{browser.name}} {{browser.version}}</p>
+</div>
+
+<script>
+    const vm = new Vue({
+        "el": "#app",
+        "data": {
+            "firstName" : "Mike",
+            "lastName"  : "Smith",
+            "frameworks": ["Angular", "Ember", "React"],
+            "browser"   : {
+                "name": "Google Chrome"
+            }
+        }
+    });
+
+    // Make sure to declare the data in the constructor, in order to create GET and SET functions
+    vm.lastName = "Sullivan";
+
+    // We can add items to an array using push
+    vm.frameworks.push("Vue");
+
+    // We can update objects using set
+    Vue.set(vm.browser, "version", 55);
+
+    // We can delete items from an array or an object
+    Vue.delete(vm.frameworks, 1);
+    Vue.delete(vm.browser, "version");
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<div id="app">
+    <div>
+        <label>Enter temperature in Fahrenheit:</label>
+        <input type="text" v-model.number.lazy="tempFahrenheit">
+        <br>
+        
+        <h2>Using computed</h2>
+        Temperature in Celsius: {{tempCelsius}}
+        <br>
+
+        <h2>Using methods</h2>
+        Temperature in Celsius: {{tempCelsius2()}}
+    </div>
+</div>
+
+<script>
+    const vm = new Vue({
+        "el"      : "#app",
+        "data"    : {
+            "tempFahrenheit": 0
+        },
+        "computed": {
+            "tempCelsius": function() {
+                // If we call tempCelsius the second time without changing the temperature
+                // in Fahrenheit, Vue will not re-calculate the value
+                console.log("Using computed");
+
+                return Math.round(5/9 * (this.tempFahrenheit - 32));
+            }
+        },
+        "methods" : {
+            "tempCelsius2": function() {
+                console.log("Using methods");
+
+                return Math.round(5/9 * (this.tempFahrenheit - 32));
+            }
+        }
+    });
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<div id="app">
+    <global-component></global-component>
+    <local-component></local-component>
+    <local-component></local-component>
+</div>
+
+<script>
+    Vue.component('global-component', {
+       template: '<div>a global component</div>' 
+    });
+    
+    var LocalComponent = {template: '<div @click="showNum()">\
+                                        a local component\
+                                    </div>',
+                         data: function() {
+                             return {
+                                 num: Math.random()
+                             };
+                         },
+                         methods: {
+                             showNum: function() {
+                                 alert('My number is ' + this.num);
+                             }
+                         }
+    };
+
+    new Vue({
+       el: '#app',
+       data: {
+           num: 42
+       },
+       components: {'local-component': LocalComponent}
+    });
+</script>
+
+<style>
+    div#app {
+        border: none;
+    }
+    div {
+        border: solid 2px black;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+</style>

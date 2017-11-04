@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<div id="app">
+    <input type="number" v-model="myFontSize">
+    <div :style="{border: 'solid 2px black', 'margin-bottom': '30px', fontSize: myFontSize + 'px'}">
+        JS object literal bound to style attribute
+    </div>
+    
+    <div :style="fancyDiv">
+        object literal in data bound to style attribute
+    </div>
+    
+    <div :style="[fancyDiv, fancierDiv]" 
+        @mouseover="fancierDiv.border = 'dashed 1px blue'"
+        @mouseout="fancierDiv.border = 'solid 1px black'"
+        >
+        multiple objects bound to style attribute
+    </div>
+</div>
+
+<script>
+    new Vue({
+       el: '#app',
+       data: {
+           myFontSize: 24,
+           fancyDiv: {
+               backgroundColor: 'lightgrey',
+               borderRadius: '10px',
+               padding: '10px',
+               marginTop: '30px'
+           },
+           fancierDiv: {
+               fontFamily: 'Arial, Helvetica',
+               border: 'solid 1px black',
+               padding: '30px'
+           }
+       }
+    });
+</script>
