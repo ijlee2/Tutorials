@@ -1,0 +1,25 @@
+{
+    "name": "mocha-tutorial-1",
+    "version": "1.0.0",
+    "description": "Tutorial by Igor Šarčević",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --reporter spec"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ijlee2/mocha-tutorial-1.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ijlee2/mocha-tutorial-1/issues"
+    },
+    "homepage": "https://github.com/ijlee2/mocha-tutorial-1#readme",
+    "dependencies": {
+        "chai": "^4.1.2",
+        "express": "^4.16.2",
+        "mocha": "^4.0.1",
+        "request": "^2.83.0"
+    }
+}
