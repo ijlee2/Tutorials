@@ -8,6 +8,7 @@ Collection of tutorials for additional learning
 - [Angular](#angular)
 - [Ember](#ember)
 - [Mocha & Chai](#mocha--chai)
+- [React](#react)
 - [Three.js](#threejs)
 - [Vue](#vue)
 
@@ -29,8 +30,10 @@ Collection of tutorials for additional learning
 - [mocha-zaza](/mocha-zaza), by Samuele Zaza
 
 
-## React Native
+## React
+
 - [react-native-novick](/react-native-novick) by Vladmir Novick
+- [redux-bos](/redux-bos) by Wes Bos
 
 
 ## Three.js
