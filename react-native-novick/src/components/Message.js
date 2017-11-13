@@ -17,12 +17,13 @@ const styles = {
         "backgroundColor": "white",
         "width"          : "70%",
         "margin"         : 10,
-        "padding"        : 10,
         "borderColor"    : "#979797",
         "borderStyle"    : "solid",
         "borderWidth"    : 1,
-        "borderRadius"   : 10
+        "borderRadius"   : 10,
+        "padding"        : 10
     },
+    
     "incomingMessage": {
         "backgroundColor": "#e1ffc7",
         "alignSelf"      : "flex-end"

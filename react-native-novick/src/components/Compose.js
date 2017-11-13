@@ -14,10 +14,10 @@ import { View, StyleSheet, Keyboard, Button, TextInput } from "react-native";
 *****************************************************************************/
 const styles = StyleSheet.create({
     "composeText": {
+        "backgroundColor"  : "white",
         "width"            : "80%",
         "height"           : 40,
         "paddingHorizontal": 10,
-        "backgroundColor"  : "white",
         "borderColor"      : "#979797",
         "borderStyle"      : "solid",
         "borderWidth"      : 1

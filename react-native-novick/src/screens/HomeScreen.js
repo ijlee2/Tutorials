@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
         "alignItems"     : "center",
         "justifyContent" : "center"
     },
+    
     "button": {
         "padding": 10
     }
