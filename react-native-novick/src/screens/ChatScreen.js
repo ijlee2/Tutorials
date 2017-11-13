@@ -1,28 +1,40 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+/****************************************************************************
 
-export default class ChatScreen extends React.Component {
+    Initialize
 
-  static navigationOptions = ({ navigation }) => ({
-    title: `Chat with ${navigation.state.params.user}`
-  });
+*****************************************************************************/
+import React, { Component } from "react";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
+
+/****************************************************************************
+
+    Create component
+
+*****************************************************************************/
+const styles = StyleSheet.create({
+    "container": {
+        "backgroundColor": "#fff",
+        "flex"           : 1,
+        "alignItems"     : "center",
+        "justifyContent" : "center"
+    }
+});
+
+class ChatScreen extends Component {
+    static navigationOptions = ({navigation}) => ({
+        "title": `Chat with ${navigation.state.params.user}`
+    });
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text>Open up App.js to start working on your app!</Text>
+                <Text>Changes you make will automatically reload.</Text>
+                <Text>Shake your phone to open the developer menu.</Text>
+            </View>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff'
-  }
-});
+export default ChatScreen;
