@@ -9,7 +9,7 @@ import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
 /****************************************************************************
 
-    Create component
+    Create style
 
 *****************************************************************************/
 const styles = StyleSheet.create({
@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
     }
 });
 
+
+/****************************************************************************
+
+    Create component
+
+*****************************************************************************/
 class ChatScreen extends Component {
     static navigationOptions = ({navigation}) => ({
         "title": `Chat with ${navigation.state.params.user}`

@@ -14,7 +14,7 @@ const RootNavigator = StackNavigator(routes);
 
 /****************************************************************************
 
-    Create component
+    Create style
 
 *****************************************************************************/
 const styles = StyleSheet.create({
@@ -24,6 +24,12 @@ const styles = StyleSheet.create({
     }
 });
 
+
+/****************************************************************************
+
+    Create component
+
+*****************************************************************************/
 class App extends Component {
     render() {
         return (

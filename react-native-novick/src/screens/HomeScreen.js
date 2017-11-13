@@ -9,7 +9,7 @@ import { StyleSheet, Text, View, Button, StatusBar } from "react-native";
 
 /****************************************************************************
 
-    Create component
+    Create style
 
 *****************************************************************************/
 const styles = StyleSheet.create({
@@ -24,6 +24,12 @@ const styles = StyleSheet.create({
     }
 });
 
+
+/****************************************************************************
+
+    Create component
+
+*****************************************************************************/
 class HomeScreen extends React.Component {
     static navigationOptions = {
         "title": "Welcome"
