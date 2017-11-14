@@ -9,7 +9,11 @@ import { StatusBar, Platform, StyleSheet, View } from "react-native";
 import { StackNavigator } from "react-navigation";
 import routes from "./src/config/routes";
 
+import { initializeApi } from "./src/services/api";
+
 const RootNavigator = StackNavigator(routes);
+
+console.ignoredYellowBox = ["Remote debugger"];
 
 
 /****************************************************************************
@@ -31,6 +35,10 @@ const styles = StyleSheet.create({
 
 *****************************************************************************/
 class App extends Component {
+    componentDidMount() {
+        initializeApi();
+    }
+    
     render() {
         return (
             <View style={styles.app}>

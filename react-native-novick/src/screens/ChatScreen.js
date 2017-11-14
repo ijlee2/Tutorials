@@ -19,7 +19,7 @@ import {
 import { Message, Compose } from "../components";
 
 // Import API methods
-import { getMockData, postMessage } from "../services/api";
+import { getMockData, getMessages, postMessage } from "../services/api";
 
 const backgroundImage = require("../assets/imgs/background.png");
 
@@ -56,22 +56,24 @@ class ChatScreen extends Component {
 
     componentDidMount() {
         // Load initial conversation
+        /*
         getMockData()
             .then(messages => {
                 this.setState({messages});
 
             });
+        */
+
+        this.unsubscribeGetMessages = getMessages(snapshot => {
+            this.setState({
+                messages: Object.values(snapshot.val())
+            });
+
+        });
     }
 
-    getMessageRow(item) {
-        return (
-            <View Style={[
-                styles.listItem,
-                (item.incoming) ? styles.incomingMessage : styles.outgoingMessage
-            ]}>
-                <Text>{item.message}</Text>
-            </View>
-        );
+    componentWillUnmount() {
+        this.unsubscribeGetMessages();
     }
 
     render() {
