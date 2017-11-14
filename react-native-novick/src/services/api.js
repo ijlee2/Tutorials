@@ -20,3 +20,11 @@ export const mockMessages = [
 export const getMockData = () => (
     new Promise(resolve => setTimeout(() => resolve(mockMessages), 1000))
 );
+
+export const postMessage = message => {
+    mockMessages.push({
+        "incoming": false,
+        message
+    });
+
+};

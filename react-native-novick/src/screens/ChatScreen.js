@@ -4,10 +4,22 @@
 
 *****************************************************************************/
 import React, { Component } from "react";
-import { StyleSheet, Text, View, ImageBackground, Button, FlatList } from "react-native";
+import {
+    Platform,
+    StyleSheet,
+    Text,
+    View,
+    KeyboardAvoidingView,
+    ImageBackground,
+    Button,
+    FlatList
+} from "react-native";
 
-// Get mock data
-import { getMockData } from "../services/api";
+// Import components
+import { Message, Compose } from "../components";
+
+// Import API methods
+import { getMockData, postMessage } from "../services/api";
 
 const backgroundImage = require("../assets/imgs/background.png");
 
@@ -22,23 +34,7 @@ const styles = StyleSheet.create({
         "backgroundColor": "transparent",
         "flex"           : 1,
         "width"          : "100%"
-    },
-
-    "listItem": {
-        "backgroundColor": "white",
-        "width"          : "70%",
-        "margin"         : 10,
-        "borderColor"    : "#979797",
-        "borderStyle"    : "solid",
-        "borderWidth"    : 1,
-        "borderRadius"   : 10,
-        "padding"        : 10
-    },
-
-    "incomingMessage": {
-        "backgroundColor": "#e1ffc7",
-        "alignSelf"      : "flex-end"
-    } 
+    }
 });
 
 
@@ -55,6 +51,8 @@ class ChatScreen extends Component {
     state = {
         "messages": []
     };
+
+    keyboardVerticalOffset = (Platform.OS === "ios") ? 60 : 0;
 
     componentDidMount() {
         // Load initial conversation
@@ -79,11 +77,20 @@ class ChatScreen extends Component {
     render() {
         return (
             <ImageBackground style={styles.container} source={backgroundImage}>
-                <FlatList
-                    data={this.state.messages}
-                    renderItem={({item}) => this.getMessageRow(item)}
-                    keyExtractor={(item, index) => (`message-${index}`)}
-                />
+                <KeyboardAvoidingView
+                    behavior="padding"
+                    keyboardVerticalOffset={this.keyboardVerticalOffset}
+                    style={styles.container}
+                >
+                    <FlatList
+                        data={this.state.messages}
+                        renderItem={Message}
+                        keyExtractor={(item, index) => (`message-${index}`)}
+                        style={styles.container}
+                    />
+
+                    <Compose submit={postMessage} />
+                </KeyboardAvoidingView>
             </ImageBackground>
         );
     }

@@ -38,8 +38,8 @@ const styles = {
 *****************************************************************************/
 const Message = ({item}) => (
     <View style={[
-        styles.message,
-        item.incoming && styles.incomingMessage
+        styles.message, item.incoming &&
+        styles.incomingMessage
     ]}>
         <Text>{item.message}</Text>
     </View>
