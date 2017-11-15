@@ -32,7 +32,8 @@ Collection of tutorials for additional learning
 
 ## React
 
-- [react-native-novick](/react-native-novick) by Vladmir Novick
+- [react-native-novick](/react-native-novick) by Vladimir Novick
+- [react-vr-novick](/react-vr-novick) by Vladimir Novick
 - [redux-bos](/redux-bos) by Wes Bos
 
 
