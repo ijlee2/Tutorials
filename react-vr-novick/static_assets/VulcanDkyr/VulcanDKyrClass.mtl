@@ -1,0 +1,192 @@
+# Blender MTL File: 'untitled287.blend'
+# Material Count: 19
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown1.jpg
+
+newmtl Material.001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dkwhite.jpg
+map_Ka dkwhite.jpg
+map_Ke dkwhite.jpg
+
+newmtl Material.002
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dkblue.jpg
+map_Ka dkblue.jpg
+map_Ke dkblue.jpg
+
+newmtl Material.003
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dkengine.jpg
+map_Ka dkengine.jpg
+map_Ke dkengine.jpg
+
+newmtl Material.004
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dkintlight.jpg
+map_Ka dkintlight.jpg
+map_Ke dkintlight.jpg
+
+newmtl Material_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material_dkbrown2.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown2.jpg
+
+newmtl Material_dkbrown3.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown3.jpg
+
+newmtl Material_dkbrown4.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown4.jpg
+
+newmtl Material_dkbrown5.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown5.jpg
+
+newmtl Material_dkbrown6.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown6.jpg
+
+newmtl Material_dkbrown7.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkbrown7.jpg
+
+newmtl Material_dkunder.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.214286 0.214286 0.214286
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dkunder.jpg
+
+newmtl None
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl None_dkbrown1.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd dkbrown1.jpg
+
+newmtl None_dkbrown2.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd dkbrown2.jpg
+
+newmtl None_dkbrown3.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd dkbrown3.jpg
+
+newmtl None_dkbrown6.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd dkbrown6.jpg
+
+newmtl None_dkbrown7.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd dkbrown7.jpg
