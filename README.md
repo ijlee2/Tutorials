@@ -22,6 +22,7 @@ Collection of tutorials for additional learning
 ## Ember
 
 - [ember-official](/ember-official), by Ember
+- [ember-zoltan](/ember-zoltan), by Zoltan Debre
 
 
 ## Mocha & Chai
