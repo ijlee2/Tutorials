@@ -2,30 +2,29 @@ import Ember      from "ember";
 import Controller from "@ember/controller";
 
 export default Controller.extend({
-    "emailAddress": "",
+    "email": "",
 
-    "isValid": Ember.computed.match("emailAddress", /^.+@.+\.(com|net|edu)+$/),
-
-    "isDisabled": Ember.computed.not("isValid"),
+    "isEmailValid"    : Ember.computed.match("email", /^.+@.+\.(com|net|edu)+$/),
+    "isSubmitDisabled": Ember.computed.not("isEmailValid"),
 
     "actions": {
         saveInvitation() {
-            this.set("responseMessage", `Thanks! We saved your email address: ${this.get("emailAddress")}`);
+            this.set("responseMessage", `Thanks, we saved your email address: ${this.get("email")}!`);
 
             // Reset the input field
-            this.set("emailAddress", "");
+            this.set("email", "");
         }
     }
 
     // Create computed properties
     /*
-    "actualEmailAddress": Ember.computed("emailAddress", function() {
-        console.log("actualEmailAddress function is called: ", this.get("emailAddress"));
+    "actualemail": Ember.computed("email", function() {
+        console.log("actualemail function is called: ", this.get("email"));
 
     }),
 
-    "emailAddressChanged": Ember.observer("emailAddress", function() {
-        console.log("observer is called: ", this.get("emailAddress"));
+    "emailChanged": Ember.observer("email", function() {
+        console.log("observer is called: ", this.get("email"));
 
     })
     */

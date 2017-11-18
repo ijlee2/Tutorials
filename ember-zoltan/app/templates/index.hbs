@@ -6,17 +6,17 @@
     <form>
         <div class="row">
             <div class="col-10 offset-1 col-sm-6 offset-sm-1 col-md-5 offset-md-2">
-                {{input type="email" value=emailAddress class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
+                {{input type="email" value=email class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
             </div>
 
             <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-3">
-                <button type="submit" class="btn btn-primary btn-block" disabled={{isDisabled}} {{action "saveInvitation"}}>Request invitation</button>
+                <button type="submit" class="btn btn-primary btn-block" disabled={{isSubmitDisabled}} {{action "saveInvitation"}}>Request invitation</button>
             </div>
         </div>
     </form>
 
     {{#if responseMessage}}
-        <div class="alert alert-success">
+        <div class="alert alert-success" role="alert">
             {{responseMessage}}
         </div>
     {{/if}}

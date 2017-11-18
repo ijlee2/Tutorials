@@ -1,1 +1,30 @@
 <h1>Contact Page</h1>
+
+<div class="alert alert-secondary" role="alert">
+    If you have any questions or feedback, please leave a message with your email address.
+</div>
+
+<form>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="email">Your email address*:</label>
+                {{input type="email" value=email class="form-control" id="email" aria-describedBy="emailHelp" placeholder="Your email address" autofocus="autofocus"}}
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your message*:</label>
+                {{textarea class="form-control" value=message id="message" rows="7" placeholder="Your message (at least 5 characters)"}}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" disabled={{unless isFormValid "disabled"}} {{action "saveMessage"}}>Send message</button>
+        </div>
+    </div>
+</form>
+
+{{#if responseMessage}}
+    <div class="alert alert-success" role="alert">
+        {{responseMessage}}
+    </div>
+{{/if}}
