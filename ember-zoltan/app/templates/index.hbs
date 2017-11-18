@@ -10,8 +10,14 @@
             </div>
 
             <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-3">
-                <button type="submit" class="btn btn-primary btn-block" disabled={{isDisabled}}>Request invitation</button>
+                <button type="submit" class="btn btn-primary btn-block" disabled={{isDisabled}} {{action "saveInvitation"}}>Request invitation</button>
             </div>
         </div>
     </form>
+
+    {{#if responseMessage}}
+        <div class="alert alert-success">
+            {{responseMessage}}
+        </div>
+    {{/if}}
 </div>
