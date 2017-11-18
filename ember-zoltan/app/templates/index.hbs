@@ -6,11 +6,11 @@
     <form>
         <div class="row">
             <div class="col-10 offset-1 col-sm-6 offset-sm-1 col-md-5 offset-md-2">
-                <input type="email" class="form-control" placeholder="Please type your email address." autofocus="autofocus" />
+                {{input type="email" value=emailAddress class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
             </div>
 
             <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-3">
-                <button type="submit" class="btn btn-primary btn-block">Request invitation</button>
+                <button type="submit" class="btn btn-primary btn-block" disabled={{isDisabled}}>Request invitation</button>
             </div>
         </div>
     </form>
