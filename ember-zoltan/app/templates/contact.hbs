@@ -4,31 +4,40 @@
     If you have any questions or feedback, please leave a message with your email address.
 </div>
 
-<form>
-    <div class="row">
-        <div class="col-6">
-            <div class="form-group">
-                <label for="email">Your email address*:</label>
-                {{input type="email" value=model.email class="form-control" id="email" aria-describedBy="emailHelp" placeholder="Your email address" autofocus="autofocus"}}
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="row">
+    <div class="col-6">
+        {{#if response}}
+            <div class="alert alert-success" role="alert">
+                <h3>Thank you! Your message was sent!</h3>
+
+                <p>From: {{model.email}}</p>
+                <p>Message: {{model.message}}</p>
+                <p>Reference ID: {{model.id}}</p>
             </div>
 
-            <div class="form-group">
-                <label for="message">Your message*:</label>
-                {{textarea class="form-control" value=model.message id="message" rows="7" placeholder="Your message (at least 5 characters)"}}
-            </div>
+        {{else}}
+            <form>
+                <div class="form-group">
+                    <label for="email">Your email address*:</label>
+                    {{input type="email" value=model.email class="form-control" id="email" aria-describedBy="emailHelp" placeholder="Your email address" autofocus="autofocus"}}
 
-            <button type="submit" class="btn btn-primary btn-block" disabled={{model.isFormNotValid}} {{action "saveMessage" model}}>Send message</button>
-        </div>
+                    {{#if model.isEmailValid}}
+                        {{fa-icon "check"}}
+                    {{/if}}
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your message*:</label>
+                    {{textarea class="form-control" value=model.message id="message" rows="7" placeholder="Your message (at least 5 characters)"}}
+
+                    {{#if model.isMessageValid}}
+                        {{fa-icon "check"}}
+                    {{/if}}
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" disabled={{model.isFormNotValid}} {{action "saveMessage" model}}>Send message</button>
+            </form>
+
+        {{/if}}
     </div>
-</form>
-
-{{#if response}}
-    <div class="alert alert-success" role="alert">
-        <h3>Thank you! Your message was sent!</h3>
-
-        <p>From: {{model.email}}</p>
-        <p>Message: {{model.message}}</p>
-        <p>Reference ID: {{model.id}}</p>
-    </div>
-{{/if}}
+</div>
