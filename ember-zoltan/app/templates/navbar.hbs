@@ -31,7 +31,13 @@
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {{#link-to "admin.invitations" tagName="li"}}<a class="dropdown-item" href="">Invitations</a>{{/link-to}}
+                    {{#link-to "admin.invitations" tagName="li"}}
+                        <a class="dropdown-item" href="">Invitations</a>
+                    {{/link-to}}
+
+                    {{#link-to "admin.contacts" tagName="li"}}
+                        <a class="dropdown-item" href="">Contacts</a>
+                    {{/link-to}}
                 </div>
             </li>
         </ul>

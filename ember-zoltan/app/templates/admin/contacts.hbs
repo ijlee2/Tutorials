@@ -1,0 +1,20 @@
+<h1>Contacts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+            <th scope="col">Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |contact|}}
+        <tr>
+            <th scope="row">{{contact.id}}</th>
+            <td>{{contact.email}}</td>
+            <td>{{contact.message}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
