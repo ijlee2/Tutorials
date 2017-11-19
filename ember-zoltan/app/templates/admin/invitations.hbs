@@ -1,0 +1,18 @@
+<h1>Invitations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |invitation|}}
+        <tr>
+            <th scope="row">{{invitation.id}}</th>
+            <td>{{invitation.email}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

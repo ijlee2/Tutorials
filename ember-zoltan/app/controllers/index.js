@@ -14,12 +14,17 @@ export default Controller.extend({
             const email = this.get("email");
 
             const newInvitation = this.store.createRecord("invitation", {email});
-            newInvitation.save();
 
-            this.set("response", `Thanks, we saved your email address: ${this.get("email")}!`);
+            newInvitation
+                .save()
+                .then(response => {
+                    this.set("response", `Thanks, we saved your email address with the following id: ${response.get("id")}.`);
 
-            // Reset the input field
-            this.set("email", "");
+                    // Reset the input field
+                    this.set("email", "");
+
+                });
+
         }
     }
 
