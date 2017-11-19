@@ -1,5 +1,13 @@
 @import "ember-cli-bootstrap-4/bootstrap";
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     padding-top: 20px;
+}
+
+.library-item {
+    min-height: 150px;
 }
