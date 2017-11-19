@@ -9,22 +9,26 @@
         <div class="col-6">
             <div class="form-group">
                 <label for="email">Your email address*:</label>
-                {{input type="email" value=email class="form-control" id="email" aria-describedBy="emailHelp" placeholder="Your email address" autofocus="autofocus"}}
+                {{input type="email" value=model.email class="form-control" id="email" aria-describedBy="emailHelp" placeholder="Your email address" autofocus="autofocus"}}
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
             <div class="form-group">
                 <label for="message">Your message*:</label>
-                {{textarea class="form-control" value=message id="message" rows="7" placeholder="Your message (at least 5 characters)"}}
+                {{textarea class="form-control" value=model.message id="message" rows="7" placeholder="Your message (at least 5 characters)"}}
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block" disabled={{unless isFormValid "disabled"}} {{action "saveMessage"}}>Send message</button>
+            <button type="submit" class="btn btn-primary btn-block" disabled={{model.isFormNotValid}} {{action "saveMessage" model}}>Send message</button>
         </div>
     </div>
 </form>
 
 {{#if response}}
     <div class="alert alert-success" role="alert">
-        {{response}}
+        <h3>Thank you! Your message was sent!</h3>
+
+        <p>From: {{model.email}}</p>
+        <p>Message: {{model.message}}</p>
+        <p>Reference ID: {{model.id}}</p>
     </div>
 {{/if}}
