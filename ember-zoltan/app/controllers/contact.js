@@ -11,7 +11,7 @@ export default Controller.extend({
 
     "actions": {
         saveMessage() {
-            this.set("responseMessage", `Thanks, we received your message and will be in touch soon! Email: ${this.get("isEmailValid")} Message: ${this.get("isMessageValid")}`);
+            this.set("response", `Thanks, we received your message and will be in touch soon! Email: ${this.get("isEmailValid")} Message: ${this.get("isMessageValid")}`);
 
             // Reset the input fields
             this.set("email", "");

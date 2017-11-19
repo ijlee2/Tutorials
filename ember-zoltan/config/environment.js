@@ -11,6 +11,20 @@ module.exports = function(environment) {
         
         "locationType": "auto",
 
+        "firebase": {
+            "apiKey"       : "AIzaSyBUuWBPKLRtW1xeiM-lnOT5F0v_iQ8oZUI",
+            "authDomain"   : "ember-tutorial-zoltan.firebaseapp.com",
+            "databaseURL"  : "https://ember-tutorial-zoltan.firebaseio.com",
+            "storageBucket": "ember-tutorial-zoltan.appspot.com",
+        },
+
+        // if using ember-cli-content-security-policy
+        "contentSecurityPolicy": {
+            "script-src" : `"self" "unsafe-eval" apis.google.com`,
+            "frame-src"  : `"self" https://*.firebaseapp.com`,
+            "connect-src": `"self" wss://*.firebaseio.com https://*.googleapis.com`
+        },
+
         "EmberENV": {
             "FEATURES": {
                 // Here you can enable experimental features on an ember canary build
@@ -26,20 +40,6 @@ module.exports = function(environment) {
         "APP": {
             // Here you can pass flags/options to your application instance
             // when it is created
-        },
-
-        "firebase": {
-            "apiKey"       : "AIzaSyBUuWBPKLRtW1xeiM-lnOT5F0v_iQ8oZUI",
-            "authDomain"   : "ember-tutorial-zoltan.firebaseapp.com",
-            "databaseURL"  : "https://ember-tutorial-zoltan.firebaseio.com",
-            "storageBucket": "ember-tutorial-zoltan.appspot.com",
-        },
-
-        // if using ember-cli-content-security-policy
-        "contentSecurityPolicy": {
-            "script-src" : "'self' 'unsafe-eval' apis.google.com",
-            "frame-src"  : "'self' https://*.firebaseapp.com",
-            "connect-src": "'self' wss://*.firebaseio.com https://*.googleapis.com"
         }
     };
 

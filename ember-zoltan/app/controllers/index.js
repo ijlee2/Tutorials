@@ -11,12 +11,12 @@ export default Controller.extend({
 
     "actions": {
         saveInvitation() {
-            const email = this.get("emailAddress");
+            const email = this.get("email");
 
             const newInvitation = this.store.createRecord("invitation", {email});
             newInvitation.save();
 
-            this.set("responseMessage", `Thanks, we saved your email address: ${this.get("email")}!`);
+            this.set("response", `Thanks, we saved your email address: ${this.get("email")}!`);
 
             // Reset the input field
             this.set("email", "");
