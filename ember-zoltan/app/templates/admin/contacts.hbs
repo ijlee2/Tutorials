@@ -11,7 +11,10 @@
     <tbody>
         {{#each model as |contact|}}
         <tr>
-            <th scope="row">{{contact.id}}</th>
+            <th scope="row">
+                <button class="btn btn-danger btn-sm" {{action "deleteContact" contact}}>Delete</button>
+                {{contact.id}}
+            </th>
             <td>{{contact.email}}</td>
             <td>{{contact.message}}</td>
         </tr>

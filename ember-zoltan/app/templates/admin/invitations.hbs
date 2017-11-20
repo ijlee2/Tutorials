@@ -10,7 +10,10 @@
     <tbody>
         {{#each model as |invitation|}}
         <tr>
-            <th scope="row">{{invitation.id}}</th>
+            <th scope="row">
+                <button class="btn btn-danger btn-sm" {{action "deleteInvitation" invitation}}>Delete</button>
+                {{invitation.id}}
+            </th>
             <td>{{invitation.email}}</td>
         </tr>
         {{/each}}
