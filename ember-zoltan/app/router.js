@@ -7,19 +7,26 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-    this.route("about");
-    this.route("contact");
-
+    // For user
     this.route("libraries", function() {
         this.route("new");
         this.route("edit", {
             "path": "/:library_id/edit"
         });
     });
+    
+    this.route("about");
+
+    this.route("contact");
+
+
+    // For admin
+    this.route("hooks");
 
     this.route("admin", function() {
         this.route("invitations");
         this.route("contacts");
+        this.route("seeder");
     });
 });
 
