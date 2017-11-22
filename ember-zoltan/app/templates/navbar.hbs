@@ -7,21 +7,21 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            {{#link-to "index" tagName="li"}}
-                <a class="nav-link" href="">Home</a>
-            {{/link-to}}
+            {{#nav-link-to "index" linkClass="nav-link"}}
+                Home
+            {{/nav-link-to}}
 
-            {{#link-to "libraries" tagName="li"}}
-                <a class="nav-link" href="">Libraries</a>
-            {{/link-to}}
+            {{#nav-link-to "libraries" linkClass="nav-link"}}
+                Libraries
+            {{/nav-link-to}}
 
-            {{#link-to "about" tagName="li"}}
-                <a class="nav-link" href="">About</a>
-            {{/link-to}}
+            {{#nav-link-to "about" linkClass="nav-link"}}
+                About
+            {{/nav-link-to}}
 
-            {{#link-to "contact" tagName="li"}}
-                <a class="nav-link" href="">Contact</a>
-            {{/link-to}}
+            {{#nav-link-to "contact" linkClass="nav-link"}}
+                Contact
+            {{/nav-link-to}}
         </ul>
 
         <ul class="navbar-nav">
@@ -31,13 +31,17 @@
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {{#link-to "admin.invitations" tagName="li"}}
-                        <a class="dropdown-item" href="">Invitations</a>
-                    {{/link-to}}
+                    {{#nav-link-to "admin.invitations" linkClass="dropdown-item"}}
+                        Invitations
+                    {{/nav-link-to}}
 
-                    {{#link-to "admin.contacts" tagName="li"}}
-                        <a class="dropdown-item" href="">Contacts</a>
-                    {{/link-to}}
+                    {{#nav-link-to "admin.contacts" linkClass="dropdown-item"}}
+                        Contacts
+                    {{/nav-link-to}}
+
+                    {{#nav-link-to "admin.seeder" linkClass="dropdown-item"}}
+                        Seeder
+                    {{/nav-link-to}}
                 </div>
             </li>
         </ul>
