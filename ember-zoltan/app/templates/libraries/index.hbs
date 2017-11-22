@@ -3,24 +3,13 @@
 <div class="row">
     {{#each model as |library|}}
     <div class="col-md-4">
-        <div class="card library-item">
-            <div class="card-header">
-                <h3 class="card-title">{{library.name}}</h3>
-            </div>
+        {{#library-item item=library}}
+            {{#link-to "libraries.edit" library.id class="btn btn-success"}}
+                Edit
+            {{/link-to}}
 
-            <div class="card-body">
-                <p>Address: {{library.address}}</p>
-                <p>Phone: {{library.phone}}</p>
-            </div>
-
-            <div class="card-footer text-right">
-                {{#link-to "libraries.edit" library.id class="btn btn-success"}}
-                    Edit
-                {{/link-to}}
-
-                <button class="btn btn-danger" {{action "deleteLibrary" library}}>Delete</button>
-            </div>
-        </div>
+            <button class="btn btn-danger" {{action "deleteLibrary" library}}>Delete</button>
+        {{/library-item}}
     </div>
     {{/each}}
 </div>
