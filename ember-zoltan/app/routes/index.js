@@ -2,14 +2,16 @@ import Route from "@ember/routing/route";
 
 export default Route.extend({
     model() {
-        return this.store.createRecord("contact");
+        return this.store.createRecord("invitation");
     },
 
     "actions": {
-        saveMessage(message) {
-            message
+        saveInvitation(invitation) {
+            invitation
                 .save()
-                .then(() => this.controller.set("response", true));
+                .then(response => {
+                    this.controller.set("response", true);
+                });
         },
 
         willTransition() {

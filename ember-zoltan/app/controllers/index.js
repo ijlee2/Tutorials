@@ -2,6 +2,7 @@ import Ember      from "ember";
 import Controller from "@ember/controller";
 
 export default Controller.extend({
+    /*
     "header"  : "Coming Soon!",
     "response": "",
     "email"   : "",
@@ -29,7 +30,6 @@ export default Controller.extend({
     }
 
     // Create computed properties
-    /*
     "actualemail": Ember.computed("email", function() {
         console.log("actualemail function is called: ", this.get("email"));
 

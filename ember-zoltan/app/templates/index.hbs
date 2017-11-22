@@ -2,22 +2,31 @@
     <h1 class="display-3">Coming Soon</h1>
 
     <p class="lead">Don't miss our launch date. Request an invitation now!</p>
-
-    <form>
-        <div class="row">
-            <div class="col-10 offset-1 col-sm-6 offset-sm-1 col-md-5 offset-md-2">
-                {{input type="email" value=email class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
-            </div>
-
-            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-3">
-                <button type="submit" class="btn btn-primary btn-block" disabled={{isSubmitDisabled}} {{action "saveInvitation"}}>Request invitation</button>
-            </div>
-        </div>
-    </form>
-
+    
     {{#if response}}
         <div class="alert alert-success" role="alert">
-            {{response}}
+            <h3>Thank you! Check your email for your invitation!</h3>
+
+            <p>Email: {{model.email}}</p>
+            <p>Reference ID: {{model.id}}</p>
         </div>
+
+    {{else}}
+        <form>
+            <div class="row">
+                <div class="col-10 offset-1 col-sm-6 offset-sm-1 col-md-5 offset-md-2">
+                    {{input type="email" value=model.email class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
+
+                    {{#if model.isEmailValid}}
+                        {{fa-icon "check"}}
+                    {{/if}}
+                </div>
+
+                <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-3">
+                    <button type="submit" class="btn btn-primary btn-block" disabled={{model.isFormNotValid}} {{action "saveInvitation" model}}>Request invitation</button>
+                </div>
+            </div>
+        </form>
+
     {{/if}}
 </div>
