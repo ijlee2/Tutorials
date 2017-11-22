@@ -5,6 +5,19 @@ export default Route.extend({
         return this.store.createRecord("library");
     },
 
+    // Use setupController to set controller parameters in a route
+    "setupController": function(controller, model) {
+        this._super(controller, model);
+
+        controller.set("title", "Add a new library");
+        controller.set("buttonLabel", "Create");
+    },
+
+    // Use renderTemplate to change the default template location
+    renderTemplate() {
+        this.render("libraries/form");
+    },
+
     "actions": {
         saveLibrary(library) {
             library
