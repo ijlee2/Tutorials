@@ -13,3 +13,23 @@
         {{number-box title="Books" number=books.length}}
     </div>
 </div>
+
+{{seeder-block
+    sectionTitle="Libraries"
+    generateAction="generateLibraries"
+    deleteAction="deleteLibraries"
+    generateReady=generateLibrariesReady
+    deleteReady=deleteLibrariesReady
+    generateInProgress=generateLibrariesInProgress
+    deleteInProgress=deleteLibrariesInProgress
+}}
+
+{{seeder-block
+    sectionTitle="Authors with Books"
+    generateAction="generateBooksAndAuthors"
+    deleteAction="deleteBooksAndAuthors"
+    generateReady=generateBooksReady
+    deleteReady=deleteBooksReady
+    generateInProgress=generateBooksInProgress,
+    deleteInProgress=deleteBooksInProgress
+}}

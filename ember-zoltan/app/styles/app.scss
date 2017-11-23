@@ -11,3 +11,14 @@ body {
 .library-item {
     min-height: 150px;
 }
+
+.badge-fade {
+    margin : 10px;
+    opacity: 0;
+
+    @include transition(all 0.5s);
+
+    &.badge-show {
+        opacity: 1;
+    }
+}

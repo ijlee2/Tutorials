@@ -1,0 +1,43 @@
+<div class="card py-4">
+    <h3>{{sectionTitle}}</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="newRecords">Number of new records:</label>
+
+            {{input value=counter class="form-control" placeholder=placeholder}}
+
+            {{#if isCounterNotValid}}
+                {{fa-icon "times"}}
+            {{/if}}
+        </div>
+
+        <button type="submit" class="btn btn-primary" disabled={{generateIsDisabled}} {{action "generateAction"}}>
+            {{#if generateInProgress}}
+                {{fa-icon "refresh" spin=true}} Generating...
+
+            {{else}}
+                Generate {{sectionTitle}}
+
+            {{/if}}
+        </button>
+
+        {{#fader-label isShowing=generateReady}}
+            Created!
+        {{/fader-label}}
+
+        <button class="btn btn-danger" disabled={{deleteIsDisabled}} {{action "deleteAction"}}>
+            {{#if deleteInProgress}}
+                {{fa-icon "refresh" spin=true}} Deleting...
+
+            {{else}}
+                Delete All {{sectionTitle}}
+
+            {{/if}}
+        </button>
+
+        {{#fader-label isShowing=deleteReady}}
+            Deleted!
+        {{/fader-label}}
+    </form>
+</div>
