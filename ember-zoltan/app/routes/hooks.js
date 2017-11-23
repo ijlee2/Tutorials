@@ -1,3 +1,4 @@
+/*
 import Route from "@ember/routing/route";
 
 // Route hooks are called in the order of appearance below
@@ -30,3 +31,4 @@ export default Route.extend({
         debugger;
     }
 });
+*/

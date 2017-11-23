@@ -21,8 +21,6 @@ Router.map(function() {
 
 
     // For admin
-    this.route("hooks");
-
     this.route("admin", function() {
         this.route("invitations");
         this.route("contacts");

@@ -6,7 +6,7 @@ export default Route.extend({
         // Make promises to retrieve these models
         return RSVP.hash({
             "libraries": this.store.findAll("library"),
-            "books"    : this.store.findAll("books"),
+            "books"    : this.store.findAll("book"),
             "authors"  : this.store.findAll("author")
         });
     },
