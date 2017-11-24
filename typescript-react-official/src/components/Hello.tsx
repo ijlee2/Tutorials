@@ -15,8 +15,8 @@ import "./Hello.css";
 *****************************************************************************/
 export interface Props {
     // name is required, whereas enthusiasmLevel is optional
-    name: string;
-    enthusiasmLevel?: number;
+    "name": string;
+    "enthusiasmLevel"?: number;
 }
 
 function Hello({name, enthusiasmLevel = 1}: Props) {
