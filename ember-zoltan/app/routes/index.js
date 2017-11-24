@@ -9,7 +9,7 @@ export default Route.extend({
         saveInvitation(invitation) {
             invitation
                 .save()
-                .then(response => {
+                .then(() => {
                     this.controller.set("response", true);
                 });
         },
