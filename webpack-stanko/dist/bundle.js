@@ -954,6 +954,10 @@ var _reactDom = __webpack_require__(18);
 
 __webpack_require__(27);
 
+var _keen = __webpack_require__(28);
+
+var _keen2 = _interopRequireDefault(_keen);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -964,6 +968,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 // Import CSS
+
+
+// Import assets
 
 
 var Hello = function (_Component) {
@@ -979,9 +986,14 @@ var Hello = function (_Component) {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
-                "h1",
+                "div",
                 null,
-                "Hello from React!"
+                _react2.default.createElement(
+                    "h1",
+                    null,
+                    "Hello from React!"
+                ),
+                _react2.default.createElement("img", { src: _keen2.default, alt: "Commander Keen" })
             );
         }
     }]);
@@ -18298,6 +18310,12 @@ module.exports = camelize;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "35af8506fc61f7a06fc1cfb2aed3163e.png";
 
 /***/ })
 /******/ ]);

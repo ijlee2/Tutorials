@@ -69,3 +69,10 @@ Let's add CSS to our app using `css-loader`. CSS loader needs to write loaded CS
 For now, we choose the latter:
 
     `npm i -D css-loader extract-text-webpack-plugin`
+
+
+## Assets
+
+Lastly, we use `file-loader` to handle files such as images, SVGs, fonts, and videos.
+
+    `npm i -D file-loader`
