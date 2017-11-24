@@ -2,6 +2,8 @@
 
 [http://yoember.com/](http://yoember.com/)
 
+Visit [https://ember-tutorial-zoltan.firebaseapp.com](https://ember-tutorial-zoltan.firebaseapp.com) to see a live demo.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
