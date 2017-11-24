@@ -58,7 +58,17 @@
                 
                 <td>{{display-year book.releaseYear}}</td>
                 
-                <td>{{book.library.name}}</td>
+                <td>
+                    {{#if book.isEditingLibrary}}
+                        {{library-select book=book libraries=libraries default=book.library action="saveLibrary"}}
+
+                        <button class="btn btn-danger" {{action "cancelEditLibrary" book}}>Cancel</button>
+
+                    {{else}}
+                        <span {{action "editLibrary" book}}>{{book.library.name}}</span>
+
+                    {{/if}}
+                </td>
             </tr>
         {{/each}}
     </tbody>
