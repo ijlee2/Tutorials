@@ -11,8 +11,8 @@ export default Route.extend({
         },
 
         cancelEditAuthor(author) {
-            author.set("isEditing", false);
             author.rollbackAttributes();
+            author.set("isEditing", false);
         },
 
         saveAuthor(author) {

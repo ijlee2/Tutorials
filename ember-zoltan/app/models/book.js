@@ -14,6 +14,8 @@ export default DS.Model.extend({
         "async"  : true
     }),
 
+    "isTitleNotValid": Ember.computed.empty("title"),
+
     randomize(author, library) {
         this.set("title", this._bookTitle());
         this.set("releaseYear", this._bookYear());
