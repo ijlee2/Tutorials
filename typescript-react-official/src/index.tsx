@@ -1,11 +1,30 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+/****************************************************************************
 
+    Initialize
+
+*****************************************************************************/
+// Import React
+import * as React    from "react";
+import * as ReactDOM from "react-dom";
+
+// Import components
+import Hello from "./components/Hello";
+
+// Progressive web app
+import registerServiceWorker from "./registerServiceWorker";
+
+// Import CSS
+import "./index.css";
+
+
+/****************************************************************************
+
+    Create app
+
+*****************************************************************************/
 ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
+    <Hello name="TypeScript" enthusiasmLevel={10} />,
+    document.getElementById("root") as HTMLElement
 );
+
 registerServiceWorker();

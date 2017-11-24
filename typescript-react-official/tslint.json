@@ -42,7 +42,7 @@
             "timeEnd",
             "trace"
         ],
-        "no-consecutive-blank-lines": true,
+        "no-consecutive-blank-lines": [true, 3],
         "no-construct": true,
         "no-debugger": true,
         "no-duplicate-variable": true,
@@ -61,13 +61,11 @@
             "check-open-brace",
             "check-whitespace"
         ],
-        "quotemark": [true, "single", "jsx-double"],
+        "quotemark": [true, "double", "jsx-double"],
         "radix": true,
         "semicolon": [true, "always"],
         "switch-default": true,
-
         "trailing-comma": [false],
-
         "triple-equals": [ true, "allow-null-check" ],
         "typedef": [
             true,
