@@ -40,3 +40,14 @@ and check our app on `http://localhost:8080`.
 We can use `html-webpack-plugin` to add `<script>` tags to our bundled app.
 
     `npm i -D html-webpack-plugin`
+
+
+## Babel
+
+Babel takes modern JavaScript and transpiles it (converts to an old version of JavaScript) so that it can be run in browsers that don't support modern standards.
+
+We need a transpiler for two reasons: (1) React and JSX heavily rely on modern JavaScript features; (2) we *should* use modern JavaScript, since we can write code easier and better.
+
+We will install 4 packages: Babel core package, Babel webpack loader, Babel env preset, and Babel React preset.
+
+    `npm i -D babel-core babel-loader babel-preset-env babel-preset-react`

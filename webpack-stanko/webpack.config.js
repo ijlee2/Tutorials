@@ -11,21 +11,40 @@ const paths = {
 
 // Webpack configuration
 module.exports = {
-    "entry"    : path.join(paths.JS, "app.js"),
+    "entry": path.join(paths.JS, "app.js"),
 
 // No longer needed, since we now use html-webpack-plugin
 //  "devServer": {
 //      "contentBase": paths.SRC
 //  },
     
-    "output"   : {
+    "output": {
         "path"    : paths.DIST,
         "filename": "bundle.js"
     },
 
+    // Tell webpack to use html-webpack-plugin
     "plugins": [
         new HtmlWebpackPlugin({
             "template": path.join(paths.SRC, "index.html")
         })
-    ]
-}
+    ],
+
+    // Tell webpack to use babel-loader for .js and .jsx files
+    "module": {
+        "rules": [
+            {
+                "test"   : /\.(js|jsx)$/,
+                "exclude": /node_modules/,
+                "use"    : ["babel-loader"]
+            }
+        ]
+    },
+
+    // Allow importing JS files without writing their extension
+    // For example, we can write `import Component from "./Component";`
+    // instead of `import Component from "./Component.jsx";`.
+    "resolve": {
+        "extensions": [".js", ".jsx"]
+    }
+};
