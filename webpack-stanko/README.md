@@ -26,8 +26,17 @@ or with `package.json` modified to run the build script,
 
 We need a server to open our application in a browser. Webpack provides a dev server so that we can serve our files and use hot module reload.
 
+    `npm i -D webpack-dev-server`
+
 After configuring `package.json` to use `webpack-dev-server`, we can type
 
     `npm run dev`
 
 and check our app on `http://localhost:8080`.
+
+
+## HTML Webpack Plugin
+
+We can use `html-webpack-plugin` to add `<script>` tags to our bundled app.
+
+    `npm i -D html-webpack-plugin`
