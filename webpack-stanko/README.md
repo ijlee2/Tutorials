@@ -51,3 +51,12 @@ We need a transpiler for two reasons: (1) React and JSX heavily rely on modern J
 We will install 4 packages: Babel core package, Babel webpack loader, Babel env preset, and Babel React preset.
 
     `npm i -D babel-core babel-loader babel-preset-env babel-preset-react`
+
+
+## React
+
+Let's install React:
+
+    `npm i react react-dom`
+
+Then, modify `src/index.html` and `src/js/app.js` to create a React app.
