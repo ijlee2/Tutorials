@@ -10,6 +10,7 @@ Collection of tutorials for additional learning
 - [Mocha & Chai](#mocha--chai)
 - [React](#react)
 - [Three.js](#threejs)
+- [TypeScript](#typescript)
 - [Vue](#vue)
 
 
@@ -41,6 +42,11 @@ Collection of tutorials for additional learning
 ## Three.js
 
 - [threejs-arslan](/threejs-arslan), by Engin Arslan
+
+
+## TypeScript
+
+- [typescript-react-official](/typescript-react-official) by TypeScript
 
 
 ## Vue
