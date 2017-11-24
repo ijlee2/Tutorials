@@ -105,7 +105,7 @@ export default Controller.extend({
             // A book belongs to a library
             const library = this._selectRandomLibrary();
 
-            const bookPromise = book.randomize().save()
+            const bookPromise = book.randomize(author, library).save()
                 .then(() => author.save())
                 // Create a guard in case there aren't any libraries
                 .then(() => library && library.save());

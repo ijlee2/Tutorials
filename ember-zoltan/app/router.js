@@ -14,11 +14,11 @@ Router.map(function() {
             "path": "/:library_id/edit"
         });
     });
-    
+    this.route("authors");
+    this.route("books");
+
     this.route("about");
-
     this.route("contact");
-
 
     // For admin
     this.route("admin", function() {

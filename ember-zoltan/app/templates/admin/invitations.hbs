@@ -1,6 +1,6 @@
 <h1>Invitations</h1>
 
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -9,13 +9,13 @@
     </thead>
     <tbody>
         {{#each model as |invitation|}}
-        <tr>
-            <th scope="row">
-                <button class="btn btn-danger btn-sm" {{action "deleteInvitation" invitation}}>Delete</button>
-                {{invitation.id}}
-            </th>
-            <td>{{invitation.email}}</td>
-        </tr>
+            <tr>
+                <th scope="row">
+                    <button class="btn btn-danger btn-sm" {{action "deleteInvitation" invitation}}>Delete</button>
+                    {{invitation.id}}
+                </th>
+                <td>{{invitation.email}}</td>
+            </tr>
         {{/each}}
     </tbody>
 </table>
