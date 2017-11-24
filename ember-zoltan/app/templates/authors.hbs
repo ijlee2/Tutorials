@@ -3,14 +3,32 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Books</th>
+            <th scope="col">Name<br /><small class="not-bold">(Click on name to edit)</small></th>
+            <th scope="col" class="vtop">Books</th>
         </tr>
     </thead>
     <tbody>
         {{#each model as |author|}}
             <tr>
-                <td>{{author.name}}</td>
+                <td>
+                    {{#if author.isEditing}}
+                        <form {{action "saveAuthor" author on="submit"}}>
+                            <div class="input-group">
+                                {{input value=author.name class="form-control"}}
+
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-success" disabled={{author.isNameNotValid}}>Save</button>
+
+                                    <button class="btn btn-danger" {{action "cancelEditAuthor" author}}>Cancel</button>
+                                </span>
+                            </div>
+                        </form>
+
+                    {{else}}
+                        <span {{action "editAuthor" author}}>{{author.name}}</span>
+
+                    {{/if}}
+                </td>
                 <td>
                     <ul>
                         {{#each author.books as |book|}}
