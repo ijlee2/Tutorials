@@ -35,8 +35,29 @@
                     
                     {{/if}}
                 </td>
-                <td>{{book.title}}</td>
+
+                <td>
+                    {{#if book.isEditingTitle}}
+                        <form {{action "saveTitle" book on="submit"}}>
+                            <div class="input-group">
+                                {{input value=book.title class="form-control"}}
+
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-success" disabled={{book.isTitleNotValid}}>Save</button>
+
+                                    <button class="btn btn-danger" {{action "cancelEditTitle" book}}>Cancel</button>
+                                </span>
+                            </div>
+                        </form>
+
+                    {{else}}
+                        <span {{action "editTitle" book}}>{{book.title}}</span>
+
+                    {{/if}}
+                </td>
+                
                 <td>{{display-year book.releaseYear}}</td>
+                
                 <td>{{book.library.name}}</td>
             </tr>
         {{/each}}
