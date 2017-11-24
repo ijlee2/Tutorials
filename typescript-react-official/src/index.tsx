@@ -3,12 +3,22 @@
     Initialize
 
 *****************************************************************************/
-// Import React
+// Import React and Redux
 import * as React    from "react";
 import * as ReactDOM from "react-dom";
 
-// Import components
-import Hello from "./components/Hello";
+import { createStore } from "redux";
+import { Provider }    from "react-redux";
+import { enthusiasm }  from "./reducers";
+import { StoreState }  from "./types";
+
+const store = createStore<StoreState>(enthusiasm, {
+    "languageName"   : "TypeScript",
+    "enthusiasmLevel": 1
+});
+
+// Import containers
+import Hello from "./containers/Hello";
 
 // Progressive web app
 import registerServiceWorker from "./registerServiceWorker";
@@ -23,7 +33,9 @@ import "./index.css";
 
 *****************************************************************************/
 ReactDOM.render(
-    <Hello name="TypeScript" enthusiasmLevel={10} />,
+    <Provider store={store}>
+        <Hello />
+    </Provider>,
     // Using as (type assertion, or cast) allows us to tell TypeScript what
     // the return type of an expression is when we know better than the type
     // checker.
