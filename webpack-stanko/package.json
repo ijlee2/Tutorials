@@ -1,3 +1,9 @@
 {
-    "name": "webpack-babel-react-revisited"
+    "name": "webpack-babel-react-revisited",
+    "devDependencies": {
+        "webpack": "^3.8.1"
+    },
+    "scripts": {
+        "build": "webpack"
+    }
 }
