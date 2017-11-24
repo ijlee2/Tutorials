@@ -12,6 +12,7 @@ Collection of tutorials for additional learning
 - [Three.js](#threejs)
 - [TypeScript](#typescript)
 - [Vue](#vue)
+- [Webpack](#webpack)
 
 
 ## Angular
@@ -52,3 +53,8 @@ Collection of tutorials for additional learning
 ## Vue
 
 - [vue-sullivan](/vue-sullivan), by Michael Sullivan
+
+
+## Webpack
+
+- [webpack-stanko](/webpack-stanko), by Stanko Tadic
