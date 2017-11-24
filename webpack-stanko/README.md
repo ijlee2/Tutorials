@@ -60,3 +60,12 @@ Let's install React:
     `npm i react react-dom`
 
 Then, modify `src/index.html` and `src/js/app.js` to create a React app.
+
+
+## CSS
+
+Let's add CSS to our app using `css-loader`. CSS loader needs to write loaded CSS code to either the `<style>` tag in the head (use `style-loader`) or an external stylesheet file (use `extract-text-webpack-plugin`).
+
+For now, we choose the latter:
+
+    `npm i -D css-loader extract-text-webpack-plugin`
