@@ -25,6 +25,7 @@ Collection of tutorials for additional learning
 
 - [ember-official](/ember-official), by Ember
 - [ember-zoltan](/ember-zoltan), by Zoltan Debre
+- [Test-Driven Development by Example](https://www.youtube.com/watch?v=2b1vcg_XSR8), by Toran Billups
 
 
 ## Mocha & Chai
