@@ -1,0 +1,8 @@
+{
+  "firebase": "my-new-app",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }],
+}
