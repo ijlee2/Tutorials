@@ -1,10 +1,11 @@
 import Application from "@ember/application";
-import { observer } from "@ember/object";
-import { once } from "@ember/runloop";
 import Resolver from "./resolver";
 import loadInitializers from "ember-load-initializers";
 import config from "./config/environment";
 
+// Our imports
+import { observer } from "@ember/object";
+import { once } from "@ember/runloop";
 import Light from "./Light";
 
 const App = Application.extend({
