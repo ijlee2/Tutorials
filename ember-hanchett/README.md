@@ -13,3 +13,4 @@ I have rewritten the exercise files to use the latest Ember (2.17 at this time).
     - example01 - Working with classes and instances (pp. 22-25)
     - example02 - Working with computed properties (pp. 25-28)
     - example03 - Working with Ember observers in Ember.js (pp. 28-30)
+    - example04 - Workign with bindings (pp. 30-33)
