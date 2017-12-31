@@ -15,3 +15,4 @@ I have rewritten the exercise files to use the latest Ember (2.17 at this time).
     - example03 - Working with Ember observers in Ember.js (pp. 28-30)
     - example04 - Working with bindings (pp. 30-33)
     - example05 - Using mixins (pp. 33-36)
+    - example06 - Using enumerables with arrays (pp. 37-44)
