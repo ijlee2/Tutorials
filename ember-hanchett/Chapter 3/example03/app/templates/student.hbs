@@ -1,0 +1,6 @@
+{{#each students as |student index|}}
+    <h2>Student #{{index}}</h2>
+    <div>Name: {{student.name}}</div>
+{{else}}
+    <div>Please add students.</div>
+{{/each}}
