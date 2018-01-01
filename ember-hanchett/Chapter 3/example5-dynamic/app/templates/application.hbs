@@ -1,0 +1,9 @@
+<h2 id="title">Welcome to Ember</h2>
+
+{{#each model as |student|}}
+	{{#link-to 'students' student}}{{student.name}}{{/link-to}} <br>
+{{/each}}
+{{outlet}}
+<br>
+<br>
+

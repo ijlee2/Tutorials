@@ -1,0 +1,16 @@
+<h2 id="title">Welcome to Ember</h2>
+
+{{#link-to 'students'}}Students{{/link-to}}<br>
+
+
+{{#link-to 'students' replace=true}}Students{{/link-to}}<br>
+
+
+{{#each model as |student|}}
+	{{#link-to 'students'  student}}{{student.name}}{{/link-to}} <br>
+{{/each}}
+{{outlet}}
+<br>
+<br>
+
+

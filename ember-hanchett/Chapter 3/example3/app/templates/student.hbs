@@ -1,0 +1,15 @@
+{{#each students as |student|}}
+	{{student.name}}<br>
+{{/each}}
+
+{{#each emptyArray as |item|}}
+	{{item}}
+{{else}}
+	Empty Array
+{{/each}}
+
+<br>
+{{#each students as |student index|}}
+Student {{student.name}} is at index {{index}}<br>
+{{/each}}
+

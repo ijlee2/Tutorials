@@ -1,0 +1,5 @@
+{{input text='text' value=hello}}
+<button {{action 'pressed' hello}}>Press Me</button><br>
+<input type="text" value={{hello}} onblur={{action 'pressed' value='target.value'}} /> 
+{{yield}}
+

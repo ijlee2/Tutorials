@@ -1,0 +1,19 @@
+{{outlet}}
+Hello! 
+
+
+{{#if isHomeworkDone}}
+ Thanks for finishing the homework!
+{{else}}
+ Please finish the homework
+{{/if}} 
+
+
+{{if isHomeworkDone "Thanks for finishing the homework!" "Please finish the homework"}}
+{{if isHomeworkDone (if isChoresDone "Thanks for finishing the homework!" )}}
+{{#unless isHomeworkDone}}
+	Please finish the homework
+{{else}}
+	Thanks for finishing the homework!
+{{/unless}}
+
