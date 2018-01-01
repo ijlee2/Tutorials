@@ -1,0 +1,8 @@
+{{#if showText}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+{{/if}}
+<br>
+
+<button {{action "toggleText"}}>{{if showText "Hide text" "Show text"}}</button>
+
+{{yield}}
