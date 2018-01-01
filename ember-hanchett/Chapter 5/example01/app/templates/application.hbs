@@ -1,0 +1,24 @@
+<h1 id="title">Welcome to Ember</h1>
+
+<label>One-way input:</label>
+<input type="text" value={{property1}}>
+<br>
+
+<label>Two-way input:</label>
+{{input type="text" value=property1}}
+<button {{action "enter" property1}}>Value of property1</button>
+<br><br>
+
+<label>Property 1:</label>
+<span>{{property1}}</span>
+<br>
+
+<label>Property 2:</label>
+<span>{{property2}}</span>
+<br>
+
+<label>Property 3:</label>
+<span>{{property3}}</span>
+<br>
+
+{{outlet}}
