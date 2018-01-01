@@ -1,0 +1,17 @@
+<h2>Child</h2>
+
+{{#each model as |letters|}}
+    {{letters}}
+    <br>
+{{/each}}
+
+<h3>Model injected in from the parent controller</h3>
+{{#each parent as |letters|}}
+    {{letters}}
+    <br>
+{{/each}}
+
+<h3>Parent property</h3>
+{{parentController.propertyParent}}
+
+{{outlet}}
