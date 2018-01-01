@@ -1,0 +1,31 @@
+{{outlet}}
+<h1>Hello!</h1>
+
+<h2>Block if statement</h2>
+{{#if isHomeworkDone}}
+    Thanks for finishing your homework.
+{{else}}
+    Please finish your homework.
+{{/if}}
+
+<h2>Inline if statement</h2>
+{{if isHomeworkDone
+    "Thanks for finishing your homework."
+    "Please finish your homework."
+}}
+
+<h2>Nested if statement</h2>
+{{if isHomeworkDone
+    (if isChoresDone
+        "Thanks for finishing your homework and chores."
+        "Thanks for finishing your homework. Please finish your chores."
+    )
+    "Please finish your homework."
+}}
+
+<h2>Unless statement</h2>
+{{#unless isHomeworkDone}}
+    Please finish your homework.
+{{else}}
+    Thanks for finishing your homework.
+{{/unless}}
