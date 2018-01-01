@@ -1,0 +1,7 @@
+<h2 id="title">Welcome to Chapter 4</h2>
+
+{{#each model as |student|}}
+    {{#link-to 'students' student.id}}{{student.name}}{{/link-to}}<br>
+{{/each}}
+
+{{outlet}}
