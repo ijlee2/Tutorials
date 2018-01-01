@@ -4,11 +4,11 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
 
 ## Table of Contents
 
-- Chapter 1. Ember CLI Basics
+### Chapter 1. Ember CLI Basics
 
     - example01 - Creating your first project, Exploring pods and the folder layout, Asset compilation (pp. 6-14)
 
-- Chapter 2. The Ember.Object Model
+### Chapter 2. The Ember.Object Model
 
     - example01 - Working with classes and instances (pp. 22-25)
     - example02 - Working with computed properties (pp. 25-28)
@@ -17,7 +17,7 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
     - example05 - Using mixins (pp. 33-36)
     - example06 - Using enumerables with arrays (pp. 37-44)
 
-- Chapter 3. Ember Templates
+### Chapter 3. Ember Templates
 
     - example01 - Defining an application template (pp. 46-48)
     - example02 - Working with conditionals in templates (pp. 49-52)
@@ -28,7 +28,7 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
     - example07 - Using template input helpers (pp. 65-68)
     - example08 - Using development helpers (pp. 68-70)
 
-- Chapter 4. Ember Router
+### Chapter 4. Ember Router
 
     - example01 - Defining an application route (pp. 72-77)
     - example02 - Setting up a route model (pp. 78-79)
@@ -39,7 +39,7 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
     - example07 - Loading and error handling (pp. 92-94)
     - example08 - Using query parameters (pp. 94-99)
 
-- Chapter 5. Ember Controllers
+### Chapter 5. Ember Controllers
 
     - example01 - Storing application properties (pp. 101-105)
     - example02 - Handling actions in controllers (pp. 105-109)
