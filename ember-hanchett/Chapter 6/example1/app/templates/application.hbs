@@ -1,0 +1,16 @@
+<h2 id="title">Welcome to Ember</h2>
+<!-- {{#student-info}}
+	This will render in the yield<br>
+{{/student-info}}-->
+
+{{#each model as |comp|}}
+	{{component comp}}
+{{/each}}
+
+{{#each model.comp as |comp|}}
+<br>
+	{{#each model.students as |student|}}
+		{{component comp name=student moreInfo='None'}}
+	{{/each}}
+{{/each}}
+{{outlet}}

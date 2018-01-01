@@ -45,3 +45,11 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
 - example02 - Handling actions in controllers (pp. 105-109)
 - example03 - Working with transitions (pp. 109-112)
 - example04 - Managing dependencies between controllers (pp. 113-117)
+
+### Chapter 6. Ember Components
+
+- example01 - Using components in an application (pp. 120-124)
+- example02 - Using events in components (pp. 124-127)
+- example03 - Implementing actions in components (pp. 127-133)
+- example04 - Passing properties to a component (pp. 133-134)
+- example05 - Using yield with components (pp. 135-136)
