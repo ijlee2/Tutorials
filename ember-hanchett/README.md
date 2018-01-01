@@ -1,6 +1,6 @@
 # Ember.js Cookbook by Erik Hanchett
 
-I have rewritten the exercise files to use the latest Ember (2.17 at this time).
+I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI Mirage (0.4.1).
 
 ## Table of Contents
 
@@ -38,3 +38,10 @@ I have rewritten the exercise files to use the latest Ember (2.17 at this time).
     - example06 - Working with asynchronous routing (pp. 88-91)
     - example07 - Loading and error handling (pp. 92-94)
     - example08 - Using query parameters (pp. 94-99)
+
+- Chapter 5. Ember Controllers
+
+    - example01 - Storing application properties (pp. 101-105)
+    - example02 - Handling actions in controllers (pp. 105-109)
+    - example03 - Working with transitions (pp. 109-112)
+    - example04 - Managing dependencies between controllers (pp. 113-117)
