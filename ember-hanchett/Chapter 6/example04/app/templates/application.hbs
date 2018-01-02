@@ -1,0 +1,13 @@
+<h1 id="title">Welcome to Ember</h1>
+
+{{student-list
+    onRemove=(action "removeController")
+    onReset=(action "resetController")
+}}
+
+{{#each model as |student|}}
+    Name: {{student}}
+    <br>
+{{/each}}
+
+{{outlet}}
