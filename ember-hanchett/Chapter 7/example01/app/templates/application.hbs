@@ -1,0 +1,9 @@
+{{#link-to "index"}}<h1 id="title">Welcome to Ember</h1>{{/link-to}}
+
+{{#each model as |book|}}
+    <label>Title:</label> {{#link-to "books" book.id}}{{book.title}}{{/link-to}}
+    <br>
+{{/each}}
+<br>
+
+{{outlet}}
