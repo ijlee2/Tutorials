@@ -1,0 +1,12 @@
+<button {{action "remove"}}>Remove the last student</button>
+<br>
+
+<button {{action "reset"}}>Reset students</button>
+<br><br>
+
+{{#each listOfStudents as |student|}}
+    Name: {{student}}
+    <br>
+{{/each}}
+
+{{yield}}
