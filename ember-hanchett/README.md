@@ -50,6 +50,15 @@ I have rewritten the exercise files to use the latest Ember (2.17) and Ember CLI
 
 - example01 - Using components in an application (pp. 120-124)
 - example02 - Using events in components (pp. 124-127)
-- example03 - Implementing actions in components (pp. 127-133)
-- example04 - Passing properties to a component (pp. 133-134)
-- example05 - Using yield with components (pp. 135-136)
+- example03 - Implementing actions in components (pp. 127-129)
+- example04 - Closure actions with our student component (pp. 129-133)
+- example05 - Passing properties to a component (pp. 133-134)
+- example06 - Using yield with components (pp. 135-136)
+
+### Chapter 7. Ember Models and Ember Data
+
+- example01 - Understanding the functionalities of Ember Data (pp. 138-143)
+- example02 - Creating, reading, updating, and deleting records with Ember Data (pp. 144-152)
+- example03 - Using fixtures (pp. 152-155)
+- example04 - Customizing the adapter and serializer (pp. 156-159)
+- example05 - Working with relationships (pp. 159-164)

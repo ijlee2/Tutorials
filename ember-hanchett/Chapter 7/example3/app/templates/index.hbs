@@ -1,0 +1,9 @@
+{{outlet}}
+{{#each model as |instructor|}}
+Name of instructor:	<b>{{instructor.name}}</b><br>
+Teaches Classes:<br>
+{{#each instructor.classes as |class index|}}
+	<b>{{addone index}}: {{class.subject}}</b><br>
+{{/each}}
+<br>	<br>
+{{/each}}
