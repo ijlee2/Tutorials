@@ -1,10 +1,11 @@
-/* eslint-env node */
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    // Add options here
+    
     // Turn off minifying CSS and JS files during development stage
     minifyCSS: {
       enabled: false

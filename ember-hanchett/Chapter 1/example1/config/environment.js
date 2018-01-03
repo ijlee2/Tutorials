@@ -1,12 +1,11 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
   let ENV = {
     // App name
-    modulePrefix: 'pod-example',
+    modulePrefix: 'example1',
     // The podModulePrefix sets the POD path to the following format: {appname}/{poddir}
-    podModulePrefix: 'pod-example/pods',
+    podModulePrefix: 'example1/pods',
     environment,
     // baseURL, which allowed an Ember app and assets to be deployed to a subdirectory
     // without requiring rewriting of asset URLs, and the accompanying <base> tag have
