@@ -41,10 +41,10 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 5. Ember Controllers
 
-- example01 - Storing application properties (pp. 101-105)
-- example02 - Handling actions in controllers (pp. 105-109)
-- example03 - Working with transitions (pp. 109-112)
-- example04 - Managing dependencies between controllers (pp. 113-117)
+- example1 - Storing application properties (pp. 101-105)
+- example2 - Handling actions in controllers (pp. 105-109)
+- example3 - Working with transitions (pp. 109-112)
+- example4 - Managing dependencies between controllers (pp. 113-117)
 
 ### Chapter 6. Ember Components
 
