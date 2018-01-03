@@ -1,0 +1,14 @@
+<label>Title:</label> {{input value=model.title size="40"}}
+<br>
+
+<label>Author:</label> {{input value=model.author size="40"}}
+<br>
+
+<label>Year:</label> {{input value=model.year size="40"}}
+<br>
+
+<button {{action "updateBook"}}>Update book</button>
+<button {{action "cancel"}}>Cancel</button>
+<br>
+
+{{outlet}}

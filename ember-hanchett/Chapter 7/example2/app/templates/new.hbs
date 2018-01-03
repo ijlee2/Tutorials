@@ -1,0 +1,14 @@
+<label>Title:</label> {{input value=info.title size="40"}}
+<br>
+
+<label>Author:</label> {{input value=info.author size="40"}}
+<br>
+
+<label>Year:</label> {{input value=info.year size="40"}}
+<br>
+
+<button {{action "createBook"}}>Create book</button>
+<button {{action "cancel"}}>Cancel</button>
+<br>
+
+{{outlet}}

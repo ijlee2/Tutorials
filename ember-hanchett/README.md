@@ -57,8 +57,8 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 7. Ember Models and Ember Data
 
-- example01 - Understanding the functionalities of Ember Data (pp. 138-143)
-- example02 - Creating, reading, updating, and deleting records with Ember Data (pp. 144-152)
-- example03 - Using fixtures (pp. 152-155)
-- example04 - Customizing the adapter and serializer (pp. 156-159)
-- example05 - Working with relationships (pp. 159-164)
+- example1 - Understanding the functionalities of Ember Data (pp. 138-143)
+- example2 - Creating, reading, updating, and deleting records with Ember Data (pp. 144-152)
+- example3 - Using fixtures (pp. 152-155)
+- example4 - Customizing the adapter and serializer (pp. 156-159)
+- example5 - Working with relationships (pp. 159-164)

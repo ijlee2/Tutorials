@@ -1,12 +1,7 @@
-import Ember from 'ember';
+import Route from "@ember/routing/route";
 
-export default Ember.Route.extend({
-	model(){
-		return this.store.findAll('book');
-	},
-	actions: {
-		cancel(){
-			this.transitionTo('application');
-		}
-	}
+export default Route.extend({
+    model() {
+        return this.store.findAll("book");
+    }
 });
