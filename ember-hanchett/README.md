@@ -19,14 +19,14 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 3. Ember Templates
 
-- example01 - Defining an application template (pp. 46-48)
-- example02 - Working with conditionals in templates (pp. 49-52)
-- example03 - Displaying a list of items (pp. 52-54)
-- example04 - Binding with element attributes and classes (pp. 54-56)
-- example05 - Working with HTML links inside templates (pp. 56-60)
-- example06 - Handling HTML actions (pp. 60-65)
-- example07 - Using template input helpers (pp. 65-68)
-- example08 - Using development helpers (pp. 68-70)
+- example1 - Defining an application template (pp. 46-48)
+- example2 - Working with conditionals in templates (pp. 49-52)
+- example3 - Displaying a list of items (pp. 52-54)
+- example4 - Binding with element attributes and classes (pp. 54-56)
+- example5 - Working with HTML links inside templates (pp. 56-60)
+- example6 - Handling HTML actions (pp. 60-65)
+- example7 - Using template input helpers (pp. 65-68)
+- example8 - Using development helpers (pp. 68-70)
 
 ### Chapter 4. Ember Router
 
