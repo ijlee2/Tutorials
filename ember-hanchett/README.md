@@ -48,12 +48,12 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 6. Ember Components
 
-- example01 - Using components in an application (pp. 120-124)
-- example02 - Using events in components (pp. 124-127)
-- example03 - Implementing actions in components (pp. 127-129)
-- example04 - Closure actions with our student component (pp. 129-133)
-- example05 - Passing properties to a component (pp. 133-134)
-- example06 - Using yield with components (pp. 135-136)
+- example1 - Using components in an application (pp. 120-124)
+- example2 - Using events in components (pp. 124-127)
+- example3 - Implementing actions in components (pp. 127-129)
+- example4 - Closure actions with our student component (pp. 129-133)
+- example5 - Passing properties to a component (pp. 133-134)
+- example6 - Using yield with components (pp. 135-136)
 
 ### Chapter 7. Ember Models and Ember Data
 
