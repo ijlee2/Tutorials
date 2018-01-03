@@ -30,14 +30,14 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 4. Ember Router
 
-- example01 - Defining an application route (pp. 72-77)
-- example02 - Setting up a route model (pp. 78-79)
-- example03 - Handling dynamic segments inside routes (pp. 80-84)
-- example04 - Defining routes with templates (pp. 85-87)
-- example05 - Using redirection with routes (pp. 87-88)
-- example06 - Working with asynchronous routing (pp. 88-91)
-- example07 - Loading and error handling (pp. 92-94)
-- example08 - Using query parameters (pp. 94-99)
+- example1 - Defining an application route (pp. 72-77)
+- example2 - Setting up a route model (pp. 78-79)
+- example3 - Handling dynamic segments inside routes (pp. 80-84)
+- example4 - Defining routes with templates (pp. 85-87)
+- example5 - Using redirection with routes (pp. 87-88)
+- example6 - Working with asynchronous routing (pp. 88-91)
+- example7 - Loading and error handling (pp. 92-94)
+- example8 - Using query parameters (pp. 94-99)
 
 ### Chapter 5. Ember Controllers
 
