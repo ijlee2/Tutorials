@@ -1,0 +1,14 @@
+{{#each model as |instructor|}}
+    <label>Name:</label> {{instructor.name}}
+    <br>
+
+    <label>Classes taught:</label>
+    <br>
+    {{#each instructor.classes as |class index|}}
+        {{add-one index}}. {{class.subject}}
+        <br>
+    {{/each}}
+    <br>
+{{/each}}
+
+{{outlet}}
