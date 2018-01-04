@@ -62,3 +62,14 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 - example3 - Using fixtures (pp. 152-155)
 - example4 - Customizing the adapter and serializer (pp. 156-159)
 - example5 - Working with relationships (pp. 159-164)
+
+### Chapter 8. Logging, Debugging, and Testing
+
+- example1 - Using Ember.Logger (pp. 166-168)
+- example2 - Using Ember Inspector (pp. 168-175)
+- example3 - Using acceptance testing (pp. 175-178)
+- example4 - Using unit tests (pp. 178-181)
+- example5 - Testing components (pp. 181-184)
+- example6 - Testing routes (pp. 185-186)
+- example7 - Testing models (pp. 186-188)
+- example8 - Testing controllers (pp. 188-190)

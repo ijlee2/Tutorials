@@ -1,0 +1,8 @@
+{{yield}}
+{{input value=val}}
+<button {{action 'add' val}}>Push Me</button><br>
+<ul>
+{{#each books as |book|}}
+	<li>{{book.name}}<br></li>
+{{/each}}
+</ul>
