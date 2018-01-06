@@ -1,0 +1,9 @@
+<ul>
+    {{#each books as |book|}}
+        <li>{{book.name}}</li>
+    {{/each}}
+</ul>
+<br>
+
+{{input value=name placeholder="Title of the book" autofocus="autofocus"}}
+<button {{action "addBook" name}}>Add Book</button>
