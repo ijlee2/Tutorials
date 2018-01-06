@@ -15,8 +15,8 @@ export default Controller.extend({
                     this.transitionToRoute("students");
 
                 }, err => {
-                    alert(`Error: Problem with token. ${err.responseText}`);
-                    
+                    alert(`Wrong username or password! ${err.responseText}`);
+
                 });
         }
     }

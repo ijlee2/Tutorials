@@ -1,0 +1,11 @@
+<h2>Login</h2>
+
+<form {{action "authenticate" on="submit"}}>
+    <label>Username:</label> {{input value=username placeholder="Username"}}
+    <br>
+
+    <label>Password:</label> {{input type="password" value=password placeholder="Password"}}
+    <br><br>
+
+    <button type="submit">Login</button>
+</form>
