@@ -65,7 +65,7 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 
 ### Chapter 8. Logging, Debugging, and Testing
 
-- example1 - Using Ember.Logger (pp. 166-168)
+- example1 - Using Console (pp. 166-168)
 - example2 - Using Ember Inspector (pp. 168-175)
 - example3 - Using acceptance testing (pp. 175-178)
 - example4 - Using unit tests (pp. 178-181)
