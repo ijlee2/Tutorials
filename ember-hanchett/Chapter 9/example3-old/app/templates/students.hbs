@@ -1,0 +1,8 @@
+<h2>Students</h2>
+{{#each model as |student|}}
+	<h3>Student: {{student.name}} </h3>
+	<h3>Age: {{student.age}} </h3>
+{{/each}}
+
+
+<button {{action 'logout'}}>Log Out</button>

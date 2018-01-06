@@ -73,3 +73,12 @@ I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI
 - example6 - Testing routes (pp. 185-186)
 - example7 - Testing models (pp. 186-188)
 - example8 - Testing controllers (pp. 188-190)
+
+### Chapter 9. Real-Life Tasks with Ember.js
+
+- example1 - Using services with a component (pp. 192-195)
+- example2 - Managing basic authentication (pp. 195-202)
+- example3 - Using OAuth2 with Ember Simple Auth (pp. 202-209)
+- example4 - Using Liquid Fire to create transitions (pp. 209-212)
+- example5 - Working with HTML5 drag and drop (pp. 212-216)
+- example6 - Learning Bootstrap with Ember.js (pp. 216-219)

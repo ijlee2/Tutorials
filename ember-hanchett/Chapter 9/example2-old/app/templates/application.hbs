@@ -1,0 +1,17 @@
+<h2 id="title">Welcome to Ember</h2>
+
+<nav class="navbar navbar-default navbar-static">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      {{#bs-dropdown tagName="li"}}
+        {{#bs-dropdown-toggle}}Example Dropdown <span class="caret"></span>{{/bs-dropdown-toggle}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to "info1"}}Info 1{{/link-to}}</li>
+          <li>{{#link-to "info2"}}Info 2{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+    </ul>
+  </div>
+</nav>
+
+{{outlet}}
