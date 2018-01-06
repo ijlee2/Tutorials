@@ -1,6 +1,6 @@
 # Ember.js Cookbook by Erik Hanchett
 
-I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI Mirage (0.4.1).
+I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI Mirage (0.4.1). In addition, Ember Data uses JSONAPIAdapter instead of RESTAdapter.
 
 ## Table of Contents
 

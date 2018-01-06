@@ -1,0 +1,11 @@
+<h2>Secret Student Information</h2>
+
+{{#each model as |student|}}
+    <label>Name:</label> {{student.name}}
+    <br>
+
+    <label>Age:</label> {{student.age}}
+    <br><br>
+{{/each}}
+
+{{outlet}}
