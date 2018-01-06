@@ -2,6 +2,14 @@
 
 I have rewritten the exercise files to use the latest Ember (2.18) and Ember CLI Mirage (0.4.1). In addition, Ember Data uses JSONAPIAdapter instead of RESTAdapter.
 
+
+## How to Run
+
+Go to an example directory and run `npm install`. Then, run `ember s` and visit `localhost:4200`.
+
+For examples in Chapter 8, you can also run `ember t --server` to run tests.
+
+
 ## Table of Contents
 
 ### Chapter 1. Ember CLI Basics
