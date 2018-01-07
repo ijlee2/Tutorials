@@ -1,0 +1,19 @@
+<h2>Example 2</h2>
+
+<label>Enter age:</label> {{input value=age}}
+<br>
+
+{{#if errorMessage.age}}
+    <p style="color: red">{{errorMessage.age}}</p>
+{{/if}}
+<br>
+
+<label>Enter email:</label> {{input value=email}}
+<br>
+
+{{#if errorMessage.email}}
+    <p style="color: red">{{errorMessage.email}}</p>
+{{/if}}
+<br>
+
+<button {{action "validateInput"}}>Check</button>

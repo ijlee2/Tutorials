@@ -1,0 +1,11 @@
+<h2>Example 1</h2>
+
+<label>Enter age:</label> {{input value=age}}
+<br>
+
+{{#if errorMessage}}
+    <p style="color: red">{{errorMessage}}</p>
+{{/if}}
+<br>
+
+<button {{action "validateInput"}}>Check</button>
