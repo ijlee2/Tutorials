@@ -1,1 +1,29 @@
-{{outlet}}
+<div class="row">
+    <div class="col-md-6 border">
+        <h2>New Post</h2>
+        <br>
+
+        <form {{action "save" on="submit"}}>
+            <label>Title:</label>
+            <br>
+            {{textarea value=title cols="40" rows="1" placeholder="Title"}}
+            <br><br>
+
+            <label>Body:</label>
+            <br>
+            {{textarea value=body cols="40" rows="6" placeholder="Start writing!"}}
+            <br><br>
+
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+
+    <div class="col-md-6 border">
+        <h2>Preview</h2>
+
+        <h3>{{title}}</h3>
+        <br>
+        
+        <p>{{markdown-to-html markdown=body}}</p>
+    </div>
+</div>

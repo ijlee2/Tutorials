@@ -1,1 +1,39 @@
-{{outlet}}
+{{#each model as |post|}}
+    <div class="row">
+        <div class="col-md-6 border">
+            <h2>{{post.title}}</h2>
+            <h3>by {{post.author}}</h3>
+            <br>
+
+            <p>{{markdown-to-html markdown=post.body}}</p>
+
+            {{#if session.isAuthenticated}}
+                <form {{action "edit"}}>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <button type="submit" {{action "delete"}} class="btn btn-danger">Delete</button>
+                </form>
+            {{/if}}
+        </div>
+
+        {{#if isEditing}}
+            <div class="col-md-6 border">
+                <h2>Edit Post</h2>
+                <br>
+
+                <form {{action "save" on="submit"}}>
+                    <label>Title:</label>
+                    <br>
+                    {{textarea value=post.title cols="40" rows="1" placeholder="Title"}}
+                    <br><br>
+
+                    <label>Body:</label>
+                    <br>
+                    {{textarea value=post.body cols="40" rows="6" placeholder="Start writing!"}}
+                    <br><br>
+
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        {{/if}}
+    </div>
+{{/each}}
