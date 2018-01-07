@@ -1,0 +1,8 @@
+<h2 id="title">Welcome to Ember</h2>
+
+{{outlet}}
+{{sockjs-chat
+url='http://localhost:7000'
+receiveAction=(action 'receiveMessage')
+sendAction=(action 'sendMessage') }}
+

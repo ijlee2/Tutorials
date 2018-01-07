@@ -98,3 +98,11 @@ For examples in Chapter 8, you can also run `ember t --server` to run tests.
 - example3 - Using Ember with Sockets (pp. 231-235)
 - example4 - Using Ember with Firebase (pp. 235-249)
 - example5 - Using server side rendering (pp. 249-250)
+
+### Chapter 11 - Real-Time Web Applications
+
+- example1 - Using dependency injection (pp. 252-254)
+- example2 - Working with application initializers (pp. 255-256)
+- example3 - Building a chat application (pp. 256-263)
+- example4 - Creating and working with add-ons (pp. 263-276)
+- example5 - Learning the Ember run loop (pp. 277-281)

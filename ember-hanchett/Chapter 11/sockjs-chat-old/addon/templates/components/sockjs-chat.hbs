@@ -1,0 +1,11 @@
+{{#if hasBlock}}
+	{{yield this}}
+{{else}}
+
+    <textarea id="chat-content" style="width:500px;height:300px" ></textarea><br/>
+    {{input type='text' placeholder='User Name' value=uname}}
+    {{input type='text' placeholder='Chat Message' value=mess}}
+    <button {{action 'enter' mess uname}}>Send</button><br>
+  
+{{/if}}
+
