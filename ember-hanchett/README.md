@@ -90,3 +90,11 @@ For examples in Chapter 8, you can also run `ember t --server` to run tests.
 - example4 - Using Liquid Fire to create transitions (pp. 209-212)
 - example5 - Working with HTML5 drag and drop (pp. 212-216)
 - example6 - Learning Bootstrap with Ember.js (pp. 216-219)
+
+### Chapter 10. Awesome Tasks with Ember
+
+- example1 - Using Ember validations (pp. 221-227)
+- example2 - Using D3.js with Ember.js (pp. 227-230)
+- example3 - Using Ember with Sockets (pp. 231-235)
+- example4 - Using Ember with Firebase (pp. 235-249)
+- example5 - Using server side rendering (pp. 249-250)
