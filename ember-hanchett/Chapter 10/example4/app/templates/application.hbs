@@ -1,0 +1,36 @@
+<div class="jumbotron">
+    <h1 id="title" class="display-4 text-center">Welcome to Ember</h1>
+</div>
+
+{{#bs-navbar backgroundColor="info" type="dark" position="fixed-top" as |navbar|}}
+    <div class="navbar-header">
+        {{navbar.toggle}}
+        <a class="navbar-brand" href="#">My New Blog</a>
+    </div>
+    
+    {{#navbar.content}}
+        {{#navbar.nav class="mr-auto" as |nav|}}
+            {{#if session.isAuthenticated}}
+                {{#nav.item}}
+                    {{#nav.link-to "application"}}Add New Post{{/nav.link-to}}
+                {{/nav.item}}
+            {{/if}}
+        {{/navbar.nav}}
+        
+        {{#navbar.nav as |nav|}}
+            {{#unless session.isAuthenticated}}
+                {{#nav.item}}
+                    {{#nav.link-to "application"}}Login{{/nav.link-to}}
+                {{/nav.item}}
+
+            {{else}}
+                {{#nav.item}}
+                    {{#nav.link-to "application"}}Logout{{/nav.link-to}}
+                {{/nav.item}}
+
+            {{/unless}}
+        {{/navbar.nav}}
+    {{/navbar.content}}
+{{/bs-navbar}}
+
+{{outlet}}
