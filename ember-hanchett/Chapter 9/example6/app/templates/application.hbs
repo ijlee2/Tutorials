@@ -1,0 +1,29 @@
+<div class="jumbotron">
+    <h1 id="title" class="display-4 text-center">Welcome to Ember</h1>
+</div>
+
+{{#bs-nav type="pills" justified=true as |nav|}}
+    {{#nav.item}}
+        {{#nav.link-to "application"}}Home{{/nav.link-to}}
+    {{/nav.item}}
+
+    {{#nav.item}}
+        {{#nav.link-to "application"}}About Me{{/nav.link-to}}
+    {{/nav.item}}
+
+    {{#nav.dropdown tagName="li" as |dd|}}
+        {{#dd.toggle}}Dropdown Menu <span class="caret"></span>{{/dd.toggle}}
+
+        {{#dd.menu as |ddm|}}
+            {{#ddm.item}}
+                {{#ddm.link-to "application"}}Item 1{{/ddm.link-to}}
+            {{/ddm.item}}
+            
+            {{#ddm.item}}
+                {{#ddm.link-to "application"}}Item 2{{/ddm.link-to}}
+            {{/ddm.item}}
+        {{/dd.menu}}
+    {{/nav.dropdown}}
+{{/bs-nav}}
+
+{{outlet}}
