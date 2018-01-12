@@ -23,6 +23,7 @@ Collection of tutorials for additional learning
 
 ## Ember
 
+- [ember-builes](/ember-builes), by Adolfo Builes
 - [ember-hanchett](/ember-hanchett), by Erik Hanchett
 - [ember-official](/ember-official), by Ember
 - [ember-zoltan](/ember-zoltan), by Zoltan Debre
