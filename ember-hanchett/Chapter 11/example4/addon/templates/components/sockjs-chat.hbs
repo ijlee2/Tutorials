@@ -1,0 +1,15 @@
+{{#if hasBlock}}
+    {{! Allow the user to use this add-on in block form}}
+    {{yield this}}
+
+{{else}}
+    <textarea disabled id="chat-content" style="width: 500px; height: 300px"></textarea>
+    <br>
+
+    {{input type="text" placeholder="Username" value=username}}
+
+    {{input type="text" placeholder="Message" value=message}}
+
+    <button {{action "onSubmit" username message}}>Send</button>
+
+{{/if}}

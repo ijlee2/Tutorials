@@ -21,6 +21,8 @@ wss.on("connection", function connection(ws) {
                 client.send(`Received: ${message}`);
             }
         });
+
+        ws.send(message);
     });
 
     ws.send("Hello from the server. Thanks for connecting!");

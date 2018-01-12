@@ -8,10 +8,10 @@ export default Component.extend({
         this.set("message", "");
         this.set("messageReceived", "");
         
-        this.sockjs.on("recieveMessage", this, "recieveMessage");
+        this.sockjs.on("receiveMessage", this, "receiveMessage");
     },
 
-    recieveMessage(message) {
+    receiveMessage(message) {
         $("#chat-content").val((index, text) => `${text}${message}\n`);
 
         this.set("messageReceived", message);

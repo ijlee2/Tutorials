@@ -1,0 +1,29 @@
+<h1 id="title">Welcome to Ember</h1>
+
+{{sockjs-chat
+    url="ws://localhost:7000"
+    receiveAction=(action "receiveMessage")
+    sendAction=(action "sendMessage")
+}}
+
+{{outlet}}
+
+{{!-- Use the add-on component in block form
+<h2>Alternative</h2>
+
+{{#sockjs-chat
+    url="ws://localhost:7000"
+    receiveAction=(action "receiveMessage")
+    sendAction=(action "sendMessage")
+    as |sockjs|
+}}
+    <textarea disabled id="chat-content" style="width: 300px; height: 300px"></textarea>
+    <br>
+
+    {{input type="text" placeholder="Username" value=username}}
+
+    {{input type="text" placeholder="Message" value=message}}
+
+    <button {{action "onSubmit" username message target=sockjs}}>Send</button>
+{{/sockjs-chat}}
+--}}

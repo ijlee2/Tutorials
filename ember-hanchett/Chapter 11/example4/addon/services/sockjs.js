@@ -8,11 +8,9 @@ export default Service.extend(Evented, {
 
     socket: null,
 
-    init() {
-        this._super(...arguments);
-
+    setup(url) {
         // Indicate where the server is located
-        let socket = this.get("websockets").socketFor("ws://localhost:7000");
+        let socket = this.get("websockets").socketFor(url);
 
         this.set("socket", socket);
 
@@ -22,14 +20,18 @@ export default Service.extend(Evented, {
         socket.on("message", event => {
             this.trigger("receiveMessage", event.data);
 
-            console.log(`Received message: ${event.data}`);
+            console.log(`Received message:\n"${event.data}"`);
 
         }, this);
     },
 
     sendMessage(message) {
-        this.get("socket").send(message);
+        const socket = this.get("socket");
 
-        console.log(`Sent message: ${message}`);
+        if (socket) {
+            socket.send(message);
+
+            console.log(`Sent message:\n"${message}"`);
+        }
     }
 });
