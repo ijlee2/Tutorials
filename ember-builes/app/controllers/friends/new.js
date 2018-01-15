@@ -4,6 +4,8 @@ export default Controller.extend({
     actions: {
         save(model) {
             console.log("Called save action in edit-form controller");
+
+            this.transitionToRoute("friends.show", model);
         },
 
         cancel() {
