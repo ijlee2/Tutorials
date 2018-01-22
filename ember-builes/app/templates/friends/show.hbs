@@ -4,3 +4,8 @@
     <li>Email: {{model.email}}</li>
     <li>Twitter: {{model.twitter}}</li>
 </ul>
+
+{{link-to "Edit info" "friends.edit" model}}
+<br>
+
+{{#link-to "friends"}}Return to list of friends{{/link-to}}
