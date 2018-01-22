@@ -5,7 +5,10 @@
     <li>Twitter: {{model.twitter}}</li>
 </ul>
 
-{{link-to "Edit info" "friends.edit" model}}
+{{link-to "Edit this friend" "friends.edit" model}}
+<br>
+
+<a href="#" {{action "delete" model}}>Delete this friend</a>
 <br>
 
 {{#link-to "friends"}}Return to list of friends{{/link-to}}
