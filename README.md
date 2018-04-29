@@ -6,6 +6,7 @@ Collection of tutorials for additional learning
 ## Table of Contents
 
 - [Angular](#angular)
+- [D3](#d3)
 - [Ember](#ember)
 - [Mocha & Chai](#mocha--chai)
 - [React](#react)
@@ -19,6 +20,11 @@ Collection of tutorials for additional learning
 
 - [angular-official](/angular-official), by Angular
 - [angular-zanfir](/angular-zanfir), by Alexander Zanfir
+
+
+## D3
+
+- [Lights Out](https://github.com/ijlee2/lights-out), by me
 
 
 ## Ember
