@@ -32,6 +32,7 @@ Collection of tutorials for additional learning
 - [ember-builes](/ember-builes), by Adolfo Builes
 - [ember-hanchett](/ember-hanchett), by Erik Hanchett
 - [ember-official](/ember-official), by Ember
+- [ember-redux-official](/ember-redux-official), by Ember Redux
 - [ember-zoltan](/ember-zoltan), by Zoltan Debre
 - [Test-Driven Development by Example](https://www.youtube.com/watch?v=2b1vcg_XSR8), by Toran Billups
 
