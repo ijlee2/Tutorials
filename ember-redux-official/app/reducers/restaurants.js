@@ -11,9 +11,23 @@ export default ((state, action) => {
                 action.response,
                 restaurant => restaurant.id
             );
+
             const merged = _.extend({}, state.all, restaurants);
 
             return Object.assign({}, state, {all: merged});
+        }
+
+        case 'RESTAURANTS:TRANSFORM_DETAIL': {
+            const restaurant = {
+                [action.response.id]: action.response
+            };
+
+            const merge = _.extend({}, state.all, restaurant);
+
+            return Object.assign({}, state, {
+                all: merge,
+                selectedId: action.response.id
+            });
         }
 
         default: {

@@ -1,0 +1,7 @@
+<ul>
+    {{#each restaurant.reviews as |review|}}
+        <li>{{review.rating}} ★</li>
+    {{else}}
+        <li>no reviews</li>
+    {{/each}}
+</ul>

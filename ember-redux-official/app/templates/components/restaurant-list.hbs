@@ -1,5 +1,9 @@
 <ul>
     {{#each-in restaurants as |key restaurant|}}
-        <li>{{restaurant.name}}</li>
+        <li>
+            {{#link-to "restaurants.detail" restaurant.id}}
+                {{restaurant.name}}
+            {{/link-to}}
+        </li>
     {{/each-in}}
 </ul>
