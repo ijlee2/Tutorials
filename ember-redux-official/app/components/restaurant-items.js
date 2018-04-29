@@ -1,9 +1,10 @@
 import Component from '@ember/component';
 import { connect } from 'ember-redux';
+import { getRestaurants } from '../reducers/restaurants';
 
 const stateToComputed = (state) => {
     return {
-        restaurants: state.restaurants.all
+        restaurants: getRestaurants(state)
     };
 };
 

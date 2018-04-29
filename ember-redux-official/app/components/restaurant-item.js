@@ -1,13 +1,10 @@
 import Component from '@ember/component';
 import { connect } from 'ember-redux';
-import _ from 'lodash';
+import { getReviews } from '../reducers/restaurants';
 
 const stateToComputed = (state) => {
     return {
-        restaurant: _.get(
-            state.restaurants.all,
-            state.restaurants.selectedId
-        )
+        reviews: getReviews(state)
     };
 };
 

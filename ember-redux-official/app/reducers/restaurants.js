@@ -1,20 +1,36 @@
 import _ from 'lodash';
+import reselect from 'reselect';
+import { normalize, schema } from 'normalizr';
+
+const { createSelector } = reselect;
+
+const reviewSchema = new schema.Entity('reviews');
+const restaurantSchema = new schema.Entity('restaurants', {
+    reviews: [reviewSchema]
+});
 
 const initialState = {
-    all: undefined
+    all: undefined,
+    selectedId: undefined,
+    reviews: undefined
 };
 
 export default ((state, action) => {
     switch (action.type) {
         case 'RESTAURANTS:TRANSFORM_LIST': {
-            const restaurants = _.keyBy(
+            const normalized = normalize(
                 action.response,
-                restaurant => restaurant.id
+                [restaurantSchema]
             );
+            const { restaurants, reviews } = normalized.entities;
 
-            const merged = _.extend({}, state.all, restaurants);
+            const merged = _.extend({}, state.all, _.keyBy(restaurants, restaurant => restaurant.id));
+            const mergedReviews = _.extend({}, state.reviews, _.keyBy(reviews, review => review.id));
 
-            return Object.assign({}, state, {all: merged});
+            return Object.assign({}, state, {
+                all: merged,
+                reviews: mergedReviews
+            });
         }
 
         case 'RESTAURANTS:TRANSFORM_DETAIL': {
@@ -22,10 +38,18 @@ export default ((state, action) => {
                 [action.response.id]: action.response
             };
 
-            const merge = _.extend({}, state.all, restaurant);
+            const normalized = normalize(
+                restaurant,
+                [restaurantSchema]
+            );
+            const { restaurants, reviews } = normalized.entities;
+
+            const merge = _.extend({}, state.all, restaurants);
+            const mergeReviews = _.extend({}, state.reviews, _.keyBy(reviews, review => review.id));
 
             return Object.assign({}, state, {
                 all: merge,
+                reviews: mergeReviews,
                 selectedId: action.response.id
             });
         }
@@ -35,3 +59,28 @@ export default ((state, action) => {
         }
     }
 });
+
+const all = state => state.restaurants.all;
+const selectedId = state => state.restaurants.selectedId;
+const reviews = state => state.restaurants.reviews;
+
+export const getRestaurants = createSelector(
+    all,
+    (all) => all
+);
+
+export const getSelectedRestaurant = createSelector(
+    all,
+    selectedId,
+    (all, selectedId) => _.get(all, selectedId)
+);
+
+export const getReviews = createSelector(
+    reviews,
+    getSelectedRestaurant,
+    (reviews, getSelectedRestaurant) => {
+        return _.map(getSelectedRestaurant.reviews, reviewId => {
+            return _.get(reviews, reviewId);
+        });
+    }
+);
