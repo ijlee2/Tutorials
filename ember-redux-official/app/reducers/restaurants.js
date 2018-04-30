@@ -54,6 +54,32 @@ export default ((state, action) => {
             });
         }
 
+        case 'RESTAURANTS:RATE': {
+            const restaurant = {
+                [action.response.id]: action.response
+            };
+
+            const normalized = normalize(
+                restaurant,
+                [restaurantSchema]
+            );
+            const { restaurants, reviews } = normalized.entities;
+
+            const merged = _.extend({}, state.all, _.keyBy(restaurants, restaurant => restaurant.id));
+            const mergedReviews = _.extend({}, state.reviews, _.keyBy(reviews, review => review.id));
+
+            return Object.assign({}, state, {
+                all: merged,
+                reviews: mergedReviews
+            });
+
+            // return {
+            //     ...state,
+            //     all: {...state.all, ...restaurants},
+            //     reviews: {...state.reviews, ...reviews}
+            // };
+        }
+
         default: {
             return state || initialState;
         }
@@ -64,6 +90,11 @@ const all = state => state.restaurants.all;
 const selectedId = state => state.restaurants.selectedId;
 const reviews = state => state.restaurants.reviews;
 
+export const getSelectedId = createSelector(
+    selectedId,
+    (selectedId) => selectedId
+);
+
 export const getRestaurants = createSelector(
     all,
     (all) => all
@@ -72,7 +103,7 @@ export const getRestaurants = createSelector(
 export const getSelectedRestaurant = createSelector(
     all,
     selectedId,
-    (all, selectedId) => _.get(all, selectedId)
+    (all, selectedId) => all[selectedId]
 );
 
 export const getReviews = createSelector(

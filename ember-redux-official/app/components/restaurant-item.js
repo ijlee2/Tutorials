@@ -1,11 +1,33 @@
 import Component from '@ember/component';
 import { connect } from 'ember-redux';
-import { getReviews } from '../reducers/restaurants';
+import fetch from 'fetch';
+import { getReviews, getSelectedId } from '../reducers/restaurants';
 
 const stateToComputed = (state) => {
     return {
-        reviews: getReviews(state)
+        reviews: getReviews(state),
+        selectedId: getSelectedId(state)
     };
 };
 
-export default connect(stateToComputed)(Component);
+// Must use function!
+const dispatchToActions = function(dispatch) {
+    return {
+        rate: rating => {
+            const selectedId = this.get('selectedId');
+            const params = {
+                method: 'POST',
+                body: JSON.stringify({ rating })
+            };
+
+            return fetch(`/api/restaurants/${selectedId}`, params)
+                .then(fetched => fetched.json())
+                .then(response => dispatch({
+                    type: 'RESTAURANTS:RATE',
+                    response: response.restaurants
+                }));
+        }
+    };
+};
+
+export default connect(stateToComputed, dispatchToActions)(Component);
