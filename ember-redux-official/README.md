@@ -1,7 +1,6 @@
 # ember-redux-official
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[https://ember-redux.com/guides/](https://ember-redux.com/guides/)
 
 ## Prerequisites
 
