@@ -1,11 +1,28 @@
+import Service from '@ember/service';
 import { module, test } from 'qunit';
-import { visit, click, currentURL, fillIn, triggerKeyEvent } from '@ember/test-helpers';
-import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
+import {
+  click,
+  currentURL,
+  visit,
+  fillIn,
+  triggerKeyEvent
+} from '@ember/test-helpers'
+
+let StubMapsService = Service.extend({
+  getMapElement() {
+    return document.createElement('div');
+  }
+});
 
 module('Acceptance | list rentals', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
+
+  hooks.beforeEach(function() {
+    this.owner.register('service:maps', StubMapsService);
+  });
 
   test('should show rentals as the home page', async function (assert) {
     await visit('/');
@@ -38,5 +55,10 @@ module('Acceptance | list rentals', function(hooks) {
   });
 
   test('should show details for a selected rental', async function (assert) {
+    await visit('/rentals');
+    await click(".grand-old-mansion");
+    assert.equal(currentURL(), '/rentals/grand-old-mansion', "should navigate to show route");
+    assert.ok(this.element.querySelector('.show-listing h2').textContent.includes("Grand Old Mansion"), 'should list rental title');
+    assert.ok(this.element.querySelector('.show-listing .description'), 'should list a description of the property');
   });
 });
