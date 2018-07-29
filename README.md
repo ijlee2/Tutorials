@@ -10,6 +10,7 @@ Collection of tutorials for additional learning
 - [Ember](#ember)
 - [Mocha & Chai](#mocha--chai)
 - [React](#react)
+- [Ruby on Rails](#ruby)
 - [Three.js](#threejs)
 - [TypeScript](#typescript)
 - [Vue](#vue)
@@ -48,6 +49,11 @@ Collection of tutorials for additional learning
 - [react-native-novick](/react-native-novick) by Vladimir Novick
 - [react-vr-novick](/react-vr-novick) by Vladimir Novick
 - [redux-bos](/redux-bos) by Wes Bos
+
+
+## Ruby on Rails
+
+- [rails-official](/rails-official) by Rails
 
 
 ## Three.js
