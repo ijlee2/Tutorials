@@ -10,7 +10,7 @@ Collection of tutorials for additional learning
 - [Ember](#ember)
 - [Mocha & Chai](#mocha--chai)
 - [React](#react)
-- [Ruby on Rails](#ruby)
+- [Ruby on Rails](#ruby-on-rails)
 - [Three.js](#threejs)
 - [TypeScript](#typescript)
 - [Vue](#vue)
