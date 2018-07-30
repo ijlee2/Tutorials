@@ -49,7 +49,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Rails panel
-  gem 'meta_request'
+  #gem 'meta_request'
 end
 
 group :test do
