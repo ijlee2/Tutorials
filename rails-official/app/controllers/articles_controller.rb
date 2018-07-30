@@ -3,6 +3,8 @@
 # these go after the public ones.
 
 class ArticlesController < ApplicationController
+    http_basic_authenticate_with name: 'username', password: 'password', except: [:index, :show]
+
     def index
         @articles = Article.all
     end
