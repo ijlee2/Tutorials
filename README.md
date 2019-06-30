@@ -51,6 +51,11 @@ Collection of tutorials for additional learning
 - [redux-bos](/redux-bos) by Wes Bos
 
 
+## Ruby
+
+- [ruby-olsen](/rubby-olsen) by Russ Olsen
+
+
 ## Ruby on Rails
 
 - [rails-official](/rails-official) by Rails
