@@ -1,0 +1,36 @@
+<div class="app">
+    <nav class="main-nav">
+        <h1 class="logo">
+            <LinkTo
+                data-test-link="Ember Library"
+                @route="index"
+            >
+                <img src="/logo.svg" alt="" role="presentation">
+                <span class="sr-only">Ember Library</span>
+            </LinkTo>
+        </h1>
+
+        <ul>
+            <li>
+                <LinkTo
+                    data-test-link="Authors"
+                    @route="authors"
+                >
+                    Authors
+                </LinkTo>
+            </li>
+            <li>
+                <LinkTo
+                    data-test-link="Books"
+                    @route="books"
+                >
+                    Books
+                </LinkTo>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="app-content">
+        {{outlet}}
+    </main>
+</div>

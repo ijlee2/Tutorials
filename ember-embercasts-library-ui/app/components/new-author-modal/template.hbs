@@ -1,0 +1,61 @@
+<button
+    class="btn-trigger"
+    type="button"
+    {{on "click" this.showModal}}
+>
+    Add a New Author
+</button>
+
+{{#if isModalShown}}
+    <div class="modal">
+        <form
+            class="modal-card"
+            {{on "submit" this.saveAuthor}}
+        >
+            <h4 class="modal-heading">
+                Add New Author for Book
+            </h4>
+
+            <div class="modal-content">
+                <div class="field">
+                    <label>First Name:</label>
+                    <Input
+                        data-test-field="First Name"
+                        @type="text"
+                        @value={{this.author.firstName}}
+                        @placeholder="J.R.R."
+                    />
+                </div>
+
+                <div class="field">
+                    <label>Last Name:</label>
+                    <Input
+                        data-test-field="Last Name"
+                        @type="text"
+                        @value={{this.author.lastName}}
+                        @placeholder="Tolkien"
+                    />
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button
+                    data-test-button="Cancel"
+                    class="btn-clear"
+                    type="button"
+                    {{on "click" this.hideModal}}
+                >
+                    Cancel
+                </button>
+
+                <button
+                    data-test-button="Save"
+                    class="btn-submit"
+                    type="submit"
+                >
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+{{/if}}

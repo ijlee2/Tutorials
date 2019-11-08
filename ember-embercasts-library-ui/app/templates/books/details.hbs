@@ -1,0 +1,64 @@
+<div class="slide-out-bg"></div>
+
+<div class="slide-out">
+    <div class="slide-out-card">
+        <LinkTo
+            data-test-link="Back"
+            @class="btn-back"
+            @route="books"
+        >
+            <span class="sr-only">Back</span>
+        </LinkTo>
+
+        <div class="slide-out-heading">
+            <div class="title">
+                <h3>{{this.model.title}}</h3>
+
+                <div class="actions">
+                    <LinkTo
+                        data-test-link="Edit"
+                        @class="btn-pop"
+                        @route="books.edit"
+                        @model={{this.model.id}}
+                    >
+                        Edit
+                    </LinkTo>
+
+                    <button
+                        data-test-button="Delete"
+                        class="btn-recessed"
+                        {{on "click" (fn this.deleteBook this.model)}}
+                    >
+                        Delete
+                    </button>
+                </div>
+            </div>
+
+            <div class="details">
+                <p>
+                    <strong>Author:</strong>
+                    <LinkTo
+                        @route="authors.details"
+                        @model={{this.model.author.id}}
+                    >
+                        {{this.model.author.lastName}}, {{this.model.author.firstName}}
+                    </LinkTo>
+                </p>
+
+                <p>
+                    <strong>Publication Date:</strong>
+                    {{this.model.publicationDate}}
+                </p>
+
+                <p>
+                    <strong>ISBN:</strong>
+                    {{this.model.isbn}}
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-out-content">
+            {{outlet}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="slide-out-bg"></div>
+
+<div class="slide-out">
+    <div class="slide-out-card">
+        <LinkTo
+            data-test-link="Back"
+            @class="btn-back"
+            @route="authors"
+        >
+            <span class="sr-only">Back</span>
+        </LinkTo>
+
+        <div class="slide-out-heading">
+            <div class="title">
+                <h3>{{this.model.lastName}}, {{this.model.firstName}}</h3>
+
+                <div class="actions">
+                    <LinkTo
+                        data-test-link="Edit"
+                        @class="btn-pop"
+                        @route="authors.edit"
+                        @model={{this.model.id}}
+                    >
+                        Edit
+                    </LinkTo>
+
+                    <button
+                        data-test-button="Delete"
+                        class="btn-recessed"
+                        {{on "click" (fn this.deleteAuthor this.model)}}
+                    >
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-out-content">
+            <div class="title">
+                <h3>{{this.model.books.length}} Books from this author</h3>
+            </div>
+
+            <div class="actions">
+                <LinkTo
+                    data-test-link="Add a Book"
+                    @class="btn-secondary btn-add"
+                    @route="authors.details.new-book"
+                    @model={{this.model.id}}
+                >
+                    Add a Book
+                </LinkTo>
+            </div>
+
+            <ul class="book-list">
+                {{#each this.model.books as |book|}}
+                    <li class="book">
+                        <p class="book-title">
+                            <LinkTo
+                                @route="books.details"
+                                @model={{book.id}}
+                            >
+                                {{book.title}}
+                            </LinkTo>
+                        </p>
+
+                        <p class="book-isbn">
+                            {{book.isbn}}
+                        </p>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{{outlet}}

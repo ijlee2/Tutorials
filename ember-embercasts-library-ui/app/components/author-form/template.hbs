@@ -1,0 +1,31 @@
+<form {{on "submit" this.submitChanges}}>
+    <div class="field">
+        <label>First Name:</label>
+        <Input
+            data-test-field="First Name"
+            @type="text"
+            @value={{this.firstName}}
+            @placeholder="J.R.R."
+        />
+    </div>
+
+    <div class="field">
+        <label>Last Name:</label>
+        <Input
+            data-test-field="Last Name"
+            @type="text"
+            @value={{this.lastName}}
+            @placeholder="Tolkien"
+        />
+    </div>
+
+    <div class="form-footer">
+        <button
+            data-test-button="Save"
+            class="btn-submit"
+            type="submit"
+        >
+            Save
+        </button>
+    </div>
+</form>

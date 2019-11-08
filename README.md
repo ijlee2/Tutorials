@@ -31,6 +31,7 @@ Collection of tutorials for additional learning
 ## Ember
 
 - [ember-builes](/ember-builes), by Adolfo Builes
+- [ember-embercasts-library-ui](/ember-embercasts-library-ui), by Embercasts
 - [ember-hanchett](/ember-hanchett), by Erik Hanchett
 - [ember-official](/ember-official), by Ember
 - [ember-redux-official](/ember-redux-official), by Ember Redux

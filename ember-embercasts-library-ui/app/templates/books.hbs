@@ -1,0 +1,39 @@
+<div class="panel-heading">
+    <div class="search">
+        <Input
+            data-test-field="Search Book"
+            @type="text"
+            @value={{this.search}}
+            @placeholder="Search by Title or ISBN"
+        />
+    </div>
+
+    <LinkTo
+        data-test-link="Add New Book"
+        @class="btn-new"
+        @route="books.create"
+    >
+        <div class="sr-only">Add New Book</div>
+    </LinkTo>
+</div>
+
+<div class="panel-content">
+    <h3 class="panel-title">Books</h3>
+
+    <ul class="collection">
+        {{#each this.model as |book|}}
+            <li>
+                <LinkTo
+                    data-test-link={{book.title}}
+                    @route="books.details"
+                    @model={{book.id}}
+                >
+                    <span class="book-title">{{book.title}}</span>
+                    <em class="book-isbn">{{book.isbn}}</em>
+                </LinkTo>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+{{outlet}}

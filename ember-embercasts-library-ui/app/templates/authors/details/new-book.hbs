@@ -1,0 +1,60 @@
+<div class="modal">
+    <form
+        class="modal-card"
+        {{on "submit" this.saveBook}}
+    >
+        <h4 class="modal-heading">
+            Add New Book for {{this.model.author.lastName}}, {{this.model.author.firstName}}
+        </h4>
+
+        <div class="modal-content">
+            <div class="field">
+                <label>Title:</label>
+                <Input
+                    data-test-field="Title"
+                    @type="text"
+                    @value={{this.model.book.title}}
+                    @placeholder="The Hobbit"
+                />
+            </div>
+
+            <div class="field">
+                <label>ISBN:</label>
+                <Input
+                    data-test-field="ISBN"
+                    @type="text"
+                    @value={{this.model.book.isbn}}
+                    @placeholder="054792822X"
+                />
+            </div>
+
+            <div class="field">
+                <label>Publication Date:</label>
+                <Input
+                    data-test-field="Publication Date"
+                    @type="date"
+                    @value={{this.model.book.publicationDate}}
+                />
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button
+                data-test-button="Cancel"
+                class="btn-clear"
+                type="button"
+                {{on "click" this.hideModal}}
+            >
+                Cancel
+            </button>
+
+            <button
+                data-test-button="Save"
+                class="btn-submit"
+                type="submit"
+            >
+                Save
+            </button>
+        </div>
+    </form>
+</div>

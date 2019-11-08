@@ -1,0 +1,26 @@
+<div class="slide-out-bg"></div>
+
+<div class="slide-out">
+    <div class="slide-out-card">
+        <LinkTo
+            data-test-link="Back"
+            @class="btn-back"
+            @route="books"
+        >
+            <span class="sr-only">Back</span>
+        </LinkTo>
+
+        <div class="slide-out-heading">
+            <div class="title">
+                <h3>New Book</h3>
+            </div>
+        </div>
+
+        <div class="slide-out-content">
+            <BookForm
+                @book={{this.model}}
+                @onSubmit={{this.saveBook}}
+            />
+        </div>
+    </div>
+</div>

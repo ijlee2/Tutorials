@@ -1,0 +1,38 @@
+<div class="panel-heading">
+    <div class="search">
+        <Input
+            data-test-field="Search Author"
+            @type="text"
+            @value={{this.search}}
+            @placeholder="Search by Author Name"
+        />
+    </div>
+
+    <LinkTo
+        data-test-link="Add New Author"
+        @class="btn-new"
+        @route="authors.create"
+    >
+        <div class="sr-only">Add New Author</div>
+    </LinkTo>
+</div>
+
+<div class="panel-content">
+    <h3 class="panel-title">Authors</h3>
+
+    <ul class="collection">
+        {{#each this.model as |author|}}
+            <li>
+                <LinkTo
+                    data-test-link="{{author.lastName}}, {{author.firstName}}"
+                    @route="authors.details"
+                    @model={{author.id}}
+                >
+                    <strong>{{author.lastName}}</strong>, {{author.firstName}}
+                </LinkTo>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+{{outlet}}

@@ -1,0 +1,27 @@
+<div class="slide-out-bg"></div>
+
+<div class="slide-out">
+    <div class="slide-out-card">
+        <LinkTo
+            data-test-link="Back"
+            @class="btn-back"
+            @route="authors.details"
+            @model={{this.model.id}}
+        >
+            <span class="sr-only">Back</span>
+        </LinkTo>
+
+        <div class="slide-out-heading">
+            <div class="title">
+                <h3>Editing: {{this.model.lastName}}, {{this.model.firstName}}</h3>
+            </div>
+        </div>
+
+        <div class="slide-out-content">
+            <AuthorForm
+                @author={{this.model}}
+                @onSubmit={{this.saveAuthor}}
+            />
+        </div>
+    </div>
+</div>
